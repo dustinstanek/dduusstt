@@ -1,0 +1,99 @@
+[f] top
+    [0p] enter A 1
+    [1p] enter A 2
+    [2p] enter B 1 direct
+    [3p] enter B 2 inverted
+    [4p] enter C 1
+    [5p] enter button white
+[f] Website
+    [0p] workpage
+    [1p] Header
+    [2p] nav
+    [3p] main menu
+[f] photography folder
+    [0f] 2518 Folder
+        [0p] 2518 Collection
+        [1p] 2518 Slideshow
+        [2f] TESTING
+            [empty] 
+        [3p] big photo
+        [4p] photo options copy
+        [5p] big photo 1
+        [6f] navigation test
+            [0p] photo options
+            [1p] 2518 photos copy
+        [7p] 2518 footer
+        [8p] 2518 Slideshow copy
+    [1p] photography
+    [2p] photography layout
+    [3f] Shy Ranje  Folder
+        [0p] slideshow
+        [1p] collection
+    [4f] Synthesis+ Folder
+        [0p] Synthesis+
+        [1p] slideshow
+    [5f] In Who's Name Folder
+        [0p] header
+        [1p] slideshow 1x1
+        [2p] collection 1x1
+        [3p] collection 4x5
+        [4p] collection 5x4
+        [5p] footer
+        [6p] slideshow 4x5
+        [7p] slideshow 5x4
+    [6f] Bulow Folder
+        [0p] Bulow
+    [7f] Analogue Folder
+        [0p] Analogue
+    [8f] hissy fitter Folder
+        [0p] collection
+        [1p] slideshow
+    [9f] photo project example
+        [0p] footer
+        [1p] header
+        [2p] slideshow
+        [3p] collection
+    [10f] Mutumbo folder
+        [0p] header
+        [1p] slideshow
+        [2p] collection
+        [3p] footer
+[f] films folder
+    [0f] film & tv folder
+        [p] film & tv
+    [1p] films
+    [2f] adverts folder
+        [p] adverts
+    [3f] music videos folder
+        [p] music videos
+[f] creative direction folder
+    [0p] creative direction
+    [1f] Extasy Folder
+        [0p] Extasy L
+        [1p] Extasy R
+        [2p] Extasy Header
+    [2f] Act Group Folder
+        [0p] Act Group Header
+    [3f] Odie Folder
+        [0p] Odie
+        [1p] Odie Header
+[f] fonts + typefaces
+    [0p] header type
+    [1p] bodycopy type
+    [2p] other types
+    [3p] + favourite types
+    [4p] + testing main pages
+    [5f] text styles to use
+        [0p] Text Style 2
+        [1p] Text Style 1
+    [6f] workpage new font testing
+        [0p] 04 authentic sans
+        [1p] 07 terminal
+
+
+
+[p] index
+[p] index v1
+[p] index v2
+[p] index v3
+[p] z alt photography

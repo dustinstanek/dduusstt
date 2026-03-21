@@ -1,0 +1,14 @@
+[id="W2114429727"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="W2114429727"] .page-content {
+	align-items: center;
+	padding: 3rem;
+	text-align: center;
+}
+
+[id="W2114429727"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

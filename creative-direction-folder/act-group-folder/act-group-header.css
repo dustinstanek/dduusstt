@@ -1,0 +1,13 @@
+[id="I2392240472"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="I2392240472"] .page-content {
+	align-items: flex-start;
+	padding-top: 0rem;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+[id="I2392240472"] .page-layout {
+}

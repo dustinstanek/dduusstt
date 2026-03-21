@@ -1,0 +1,31 @@
+[id="Y0354801782"] .page-content {
+	border-radius: 0rem;
+	border-style: solid;
+	border-width: 0rem;
+	text-align: center;
+	width: 100%;
+	padding: 0rem;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+[id="Y0354801782"] .page-layout {
+	padding: 0rem;
+	max-width: 100%;
+	align-items: center;
+	--page-layout-mix: exclusion;
+}
+
+[id="Y0354801782"].page {
+	justify-content: center;
+	min-height: var(--viewport-height);
+}
+
+[id="Y0354801782"] .backdrop {
+}
+
+.mobile [id="Y0354801782"] .backdrop {
+}
+
+.mobile [id="Y0354801782"] .page-layout {
+}

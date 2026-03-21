@@ -1,0 +1,422 @@
+{
+  "F4050300507": {
+    "title": "z alt photography",
+    "purl": "z-alt-photography",
+    "html": "./z-alt-photography.html",
+    "css": "./z-alt-photography.css"
+  },
+  "L3905373592": {
+    "title": "workpage",
+    "purl": "workpage",
+    "html": "./website/workpage.html",
+    "css": "./website/workpage.css"
+  },
+  "F1147438870": {
+    "title": "Header",
+    "purl": "header",
+    "html": "./website/header.html",
+    "css": "./website/header.css"
+  },
+  "E2408968504": {
+    "title": "nav",
+    "purl": "nav",
+    "html": "./website/nav.html",
+    "css": "./website/nav.css"
+  },
+  "D1532031542": {
+    "title": "main menu",
+    "purl": "main-menu",
+    "html": "./website/main-menu.html",
+    "css": "./website/main-menu.css"
+  },
+  "V1291301463": {
+    "title": "creative direction",
+    "purl": "creative-direction-1",
+    "html": "./creative-direction-folder/creative-direction.html",
+    "css": "./creative-direction-folder/creative-direction.css"
+  },
+  "A1638209872": {
+    "title": "Extasy L",
+    "purl": "extasy-l",
+    "html": "./creative-direction-folder/extasy-folder/extasy-l.html",
+    "css": "./creative-direction-folder/extasy-folder/extasy-l.css"
+  },
+  "L3982575713": {
+    "title": "Extasy R",
+    "purl": "extasy-r",
+    "html": "./creative-direction-folder/extasy-folder/extasy-r.html",
+    "css": "./creative-direction-folder/extasy-folder/extasy-r.css"
+  },
+  "J2091369510": {
+    "title": "Extasy Header",
+    "purl": "extasy-header",
+    "html": "./creative-direction-folder/extasy-folder/extasy-header.html",
+    "css": "./creative-direction-folder/extasy-folder/extasy-header.css"
+  },
+  "I2392240472": {
+    "title": "Act Group Header",
+    "purl": "act-group-header",
+    "html": "./creative-direction-folder/act-group-folder/act-group-header.html",
+    "css": "./creative-direction-folder/act-group-folder/act-group-header.css"
+  },
+  "Q1833438390": {
+    "title": "Odie",
+    "purl": "odie-3",
+    "html": "./creative-direction-folder/odie-folder/odie.html",
+    "css": null
+  },
+  "W1144244118": {
+    "title": "Odie Header",
+    "purl": "odie-header-1",
+    "html": "./creative-direction-folder/odie-folder/odie-header.html",
+    "css": "./creative-direction-folder/odie-folder/odie-header.css"
+  },
+  "T1230269738": {
+    "title": "film & tv",
+    "purl": "film-tv",
+    "html": "./films-folder/film-&-tv-folder/film-&-tv.html",
+    "css": null
+  },
+  "E1449802595": {
+    "title": "films",
+    "purl": "films-1",
+    "html": "./films-folder/films.html",
+    "css": "./films-folder/films.css"
+  },
+  "H0287665811": {
+    "title": "adverts",
+    "purl": "adverts",
+    "html": "./films-folder/adverts-folder/adverts.html",
+    "css": null
+  },
+  "O2872706408": {
+    "title": "music videos",
+    "purl": "music-videos-1",
+    "html": "./films-folder/music-videos-folder/music-videos.html",
+    "css": null
+  },
+  "Q3758483187": {
+    "title": "2518 Collection",
+    "purl": "2518-collection",
+    "html": "./photography-folder/2518-folder/2518-collection.html",
+    "css": "./photography-folder/2518-folder/2518-collection.css"
+  },
+  "Y0973923457": {
+    "title": "2518 Slideshow",
+    "purl": "2518-slideshow-1",
+    "html": "./photography-folder/2518-folder/2518-slideshow.html",
+    "css": "./photography-folder/2518-folder/2518-slideshow.css"
+  },
+  "R0090817038": {
+    "title": "big photo",
+    "purl": "big-photo",
+    "html": "./photography-folder/2518-folder/big-photo.html",
+    "css": "./photography-folder/2518-folder/big-photo.css"
+  },
+  "Y1281401033": {
+    "title": "photo options copy",
+    "purl": "photo-options-copy",
+    "html": "./photography-folder/2518-folder/photo-options-copy.html",
+    "css": "./photography-folder/2518-folder/photo-options-copy.css"
+  },
+  "G2821624290": {
+    "title": "big photo 1",
+    "purl": "big-photo-1",
+    "html": "./photography-folder/2518-folder/big-photo-1.html",
+    "css": "./photography-folder/2518-folder/big-photo-1.css"
+  },
+  "Y2387714926": {
+    "title": "photo options",
+    "purl": "photo-options",
+    "html": "./photography-folder/2518-folder/navigation-test/photo-options.html",
+    "css": "./photography-folder/2518-folder/navigation-test/photo-options.css"
+  },
+  "R3706822933": {
+    "title": "2518 photos copy",
+    "purl": "2518-photos-copy",
+    "html": "./photography-folder/2518-folder/navigation-test/2518-photos-copy.html",
+    "css": "./photography-folder/2518-folder/navigation-test/2518-photos-copy.css"
+  },
+  "S0393537536": {
+    "title": "2518 footer",
+    "purl": "2518-footer-1",
+    "html": "./photography-folder/2518-folder/2518-footer.html",
+    "css": "./photography-folder/2518-folder/2518-footer.css"
+  },
+  "T3354801613": {
+    "title": "2518 Slideshow copy",
+    "purl": "2518-slideshow-copy",
+    "html": "./photography-folder/2518-folder/2518-slideshow-copy.html",
+    "css": "./photography-folder/2518-folder/2518-slideshow-copy.css"
+  },
+  "Q1840289815": {
+    "title": "photography",
+    "purl": "photography",
+    "html": "./photography-folder/photography.html",
+    "css": "./photography-folder/photography.css"
+  },
+  "L1515675988": {
+    "title": "photography layout",
+    "purl": "photography-layout",
+    "html": "./photography-folder/photography-layout.html",
+    "css": "./photography-folder/photography-layout.css"
+  },
+  "J4043791411": {
+    "title": "Shy Ranje Slideshow",
+    "purl": "shy-ranje-slideshow",
+    "html": "./photography-folder/shy-ranje-folder/shy-ranje-slideshow.html",
+    "css": "./photography-folder/shy-ranje-folder/shy-ranje-slideshow.css"
+  },
+  "D0628072302": {
+    "title": "Shy Ranje Collection",
+    "purl": "shy-ranje-collection",
+    "html": "./photography-folder/shy-ranje-folder/shy-ranje-collection.html",
+    "css": "./photography-folder/shy-ranje-folder/shy-ranje-collection.css"
+  },
+  "S1482468705": {
+    "title": "Synethesis+",
+    "purl": "synethesis+",
+    "html": "./photography-folder/synthesis+-folder/synethesis+.html",
+    "css": null
+  },
+  "K2091590806": {
+    "title": "Synthesis+ Slideshow",
+    "purl": "synthesis+-slideshow",
+    "html": "./photography-folder/synthesis+-folder/synthesis+-slideshow.html",
+    "css": "./photography-folder/synthesis+-folder/synthesis+-slideshow.css"
+  },
+  "A0112641077": {
+    "title": "In Who's Name header",
+    "purl": "in-who's-name-header",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-header.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-header.css"
+  },
+  "Y2794191865": {
+    "title": "in who's name slideshow 1x1",
+    "purl": "in-who's-name-slideshow-1x1",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-1x1.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-1x1.css"
+  },
+  "L1224514264": {
+    "title": "in who's name collection 1x1",
+    "purl": "in-who's-name-collection-1x1",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-collection-1x1.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-collection-1x1.css"
+  },
+  "Y0841153007": {
+    "title": "in who's name collection 4x5",
+    "purl": "in-who's-name-collection-4x5-1",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-collection-4x5.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-collection-4x5.css"
+  },
+  "S1922845211": {
+    "title": "in who's name collection 5x4",
+    "purl": "in-who's-name-collection-5x4",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-collection-5x4.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-collection-5x4.css"
+  },
+  "B2060236606": {
+    "title": "in who's name footer",
+    "purl": "in-who's-name-footer",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-footer.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-footer.css"
+  },
+  "N2268416707": {
+    "title": "in who's name slideshow 4x5",
+    "purl": "in-who's-name-slideshow-4x5",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-4x5.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-4x5.css"
+  },
+  "J3972619202": {
+    "title": "in who's name slideshow 5x4",
+    "purl": "in-who's-name-slideshow-5x4",
+    "html": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-5x4.html",
+    "css": "./photography-folder/in-whos-name-folder/in-whos-name-slideshow-5x4.css"
+  },
+  "R3760714450": {
+    "title": "Bulow",
+    "purl": "bulow",
+    "html": "./photography-folder/bulow-folder/bulow.html",
+    "css": null
+  },
+  "L3686572533": {
+    "title": "Analogue",
+    "purl": "analogue",
+    "html": "./photography-folder/analogue-folder/analogue.html",
+    "css": null
+  },
+  "A0739453177": {
+    "title": "hissy fitter Collection",
+    "purl": "hissy-fitter-collection",
+    "html": "./photography-folder/hissy-fitter-folder/hissy-fitter-collection.html",
+    "css": "./photography-folder/hissy-fitter-folder/hissy-fitter-collection.css"
+  },
+  "A0967828573": {
+    "title": "hissy fitter Slideshow",
+    "purl": "hissy-fitter-slideshow",
+    "html": "./photography-folder/hissy-fitter-folder/hissy-fitter-slideshow.html",
+    "css": "./photography-folder/hissy-fitter-folder/hissy-fitter-slideshow.css"
+  },
+  "U3360093990": {
+    "title": "photo example footer",
+    "purl": "photo-example-footer",
+    "html": "./photography-folder/photo-project-example/photo-example-footer.html",
+    "css": "./photography-folder/photo-project-example/photo-example-footer.css"
+  },
+  "T4223374523": {
+    "title": "photo example header",
+    "purl": "photo-example-header",
+    "html": "./photography-folder/photo-project-example/photo-example-header.html",
+    "css": "./photography-folder/photo-project-example/photo-example-header.css"
+  },
+  "B3134620350": {
+    "title": "photo example slideshow",
+    "purl": "photo-example-slideshow",
+    "html": "./photography-folder/photo-project-example/photo-example-slideshow.html",
+    "css": "./photography-folder/photo-project-example/photo-example-slideshow.css"
+  },
+  "H4230128614": {
+    "title": "photo example collection",
+    "purl": "photo-example-collection",
+    "html": "./photography-folder/photo-project-example/photo-example-collection.html",
+    "css": "./photography-folder/photo-project-example/photo-example-collection.css"
+  },
+  "F3201160620": {
+    "title": "Mutumbo header",
+    "purl": "mutumbo-header",
+    "html": "./photography-folder/mutumbo-folder/mutumbo-header.html",
+    "css": "./photography-folder/mutumbo-folder/mutumbo-header.css"
+  },
+  "V1077260407": {
+    "title": "Mutumbo slideshow",
+    "purl": "mutumbo-slideshow",
+    "html": "./photography-folder/mutumbo-folder/mutumbo-slideshow.html",
+    "css": "./photography-folder/mutumbo-folder/mutumbo-slideshow.css"
+  },
+  "T0894061481": {
+    "title": "Mutumbo collection",
+    "purl": "mutumbo-collection",
+    "html": "./photography-folder/mutumbo-folder/mutumbo-collection.html",
+    "css": "./photography-folder/mutumbo-folder/mutumbo-collection.css"
+  },
+  "H2543095183": {
+    "title": "Mutumbo footer",
+    "purl": "mutumbo-footer",
+    "html": "./photography-folder/mutumbo-folder/mutumbo-footer.html",
+    "css": "./photography-folder/mutumbo-folder/mutumbo-footer.css"
+  },
+  "Y0354801782": {
+    "title": "enter A 1",
+    "purl": "enter-a-1",
+    "html": "./top/enter-a-1.html",
+    "css": "./top/enter-a-1.css"
+  },
+  "Q0086583170": {
+    "title": "enter A 2",
+    "purl": "enter-a-2",
+    "html": "./top/enter-a-2.html",
+    "css": "./top/enter-a-2.css"
+  },
+  "B4208561071": {
+    "title": "enter B 1 direct",
+    "purl": "enter-b-1-direct-1",
+    "html": "./top/enter-b-1-direct.html",
+    "css": "./top/enter-b-1-direct.css"
+  },
+  "V2588924067": {
+    "title": "enter B 3 inverted",
+    "purl": "enter-b-3-inverted-1",
+    "html": "./top/enter-b-3-inverted.html",
+    "css": "./top/enter-b-3-inverted.css"
+  },
+  "Y2336206442": {
+    "title": "enter C 1",
+    "purl": "enter-c-1",
+    "html": "./top/enter-c-1.html",
+    "css": "./top/enter-c-1.css"
+  },
+  "M0718640611": {
+    "title": "enter button white",
+    "purl": "enter-button-white",
+    "html": "./top/enter-button-white.html",
+    "css": "./top/enter-button-white.css"
+  },
+  "F4095150182": {
+    "title": "index",
+    "purl": "index",
+    "html": "./index.html",
+    "css": "./index.css"
+  },
+  "V2770250584": {
+    "title": "header type",
+    "purl": "header-type",
+    "html": "./fonts-+-typefaces/header-type.html",
+    "css": "./fonts-+-typefaces/header-type.css"
+  },
+  "A1920718459": {
+    "title": "bodycopy  type",
+    "purl": "bodycopy-type",
+    "html": "./fonts-+-typefaces/bodycopy-type.html",
+    "css": "./fonts-+-typefaces/bodycopy-type.css"
+  },
+  "W2114429727": {
+    "title": "other types",
+    "purl": "other-types",
+    "html": "./fonts-+-typefaces/other-types.html",
+    "css": "./fonts-+-typefaces/other-types.css"
+  },
+  "K4223909912": {
+    "title": "+ favourite types",
+    "purl": "+-favourite-types",
+    "html": "./fonts-+-typefaces/+-favourite-types.html",
+    "css": "./fonts-+-typefaces/+-favourite-types.css"
+  },
+  "U1935182974": {
+    "title": "+ testing main pages",
+    "purl": "+-testing-main-pages",
+    "html": "./fonts-+-typefaces/+-testing-main-pages.html",
+    "css": "./fonts-+-typefaces/+-testing-main-pages.css"
+  },
+  "F1087268232": {
+    "title": "Text Style 2",
+    "purl": "text-style-2",
+    "html": "./fonts-+-typefaces/text-styles-to-use/text-style-2.html",
+    "css": "./fonts-+-typefaces/text-styles-to-use/text-style-2.css"
+  },
+  "K0474319677": {
+    "title": "Text Style 1",
+    "purl": "text-style-1",
+    "html": "./fonts-+-typefaces/text-styles-to-use/text-style-1.html",
+    "css": "./fonts-+-typefaces/text-styles-to-use/text-style-1.css"
+  },
+  "T1369199586": {
+    "title": "04 authentic sans",
+    "purl": "04-authentic-sans",
+    "html": "./fonts-+-typefaces/workpage-new-font-testing/04-authentic-sans.html",
+    "css": "./fonts-+-typefaces/workpage-new-font-testing/04-authentic-sans.css"
+  },
+  "R0605850218": {
+    "title": "07 terminal",
+    "purl": "07-terminal",
+    "html": "./fonts-+-typefaces/workpage-new-font-testing/07-terminal.html",
+    "css": "./fonts-+-typefaces/workpage-new-font-testing/07-terminal.css"
+  },
+  "E1096738811": {
+    "title": "index v2",
+    "purl": "index-v2",
+    "html": "./index-v2.html",
+    "css": "./index-v2.css"
+  },
+  "I1072348869": {
+    "title": "index v1",
+    "purl": "index-v1",
+    "html": "./index-v1.html",
+    "css": "./index-v1.css"
+  },
+  "O1539556665": {
+    "title": "index v3",
+    "purl": "index-v3",
+    "html": "./index-v3.html",
+    "css": "./index-v3.css"
+  }
+}

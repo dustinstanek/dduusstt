@@ -1,0 +1,13 @@
+[id="R0605850218"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="R0605850218"] .page-content {
+	align-items: center;
+	text-align: center;
+}
+
+[id="R0605850218"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

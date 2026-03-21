@@ -1,0 +1,14 @@
+
+
+[id="Q1840289815"] .page-content {
+	align-items: flex-start;
+	padding: 3rem;
+}
+
+[id="Q1840289815"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="Q1840289815"] .page-layout {
+	align-items: flex-start;
+}

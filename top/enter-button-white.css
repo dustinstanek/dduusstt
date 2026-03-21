@@ -1,0 +1,33 @@
+[id="M0718640611"] .page-content {
+	border-radius: 0rem;
+	border-style: solid;
+	border-width: 0rem;
+	text-align: center;
+	width: 100%;
+	padding: 0rem;
+	align-items: center;
+}
+
+[id="M0718640611"] .page-layout {
+	padding: 0rem;
+	max-width: 100%;
+}
+
+[id="M0718640611"].page {
+	justify-content: center;
+	--page-mix: difference;
+	min-height: var(--viewport-height);
+}
+
+[id="M0718640611"] .backdrop {
+}
+
+.mobile [id="M0718640611"] .backdrop {
+}
+
+.mobile [id="M0718640611"] .page-layout {
+}
+
+.overlay-content:has([id="M0718640611"]) {
+	--overlay-mix: difference;
+}

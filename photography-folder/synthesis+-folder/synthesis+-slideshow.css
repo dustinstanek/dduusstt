@@ -1,0 +1,15 @@
+
+
+[id="K2091590806"] .page-content {
+	text-align: center;
+	align-items: center;
+}
+
+[id="K2091590806"].page {
+	justify-content: center;
+	min-height: var(--viewport-height);
+}
+
+[id="K2091590806"] .page-layout {
+	padding: 0rem;
+}

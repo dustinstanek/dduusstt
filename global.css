@@ -1,0 +1,1643 @@
+@font-face {
+  font-family: "Antiqua";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842428617953370700845969719904/AntiquaEnglisch10-Normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/F2842428638004981508968252326496/ApfelGrotezk-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/U2842428653426459554589437477472/ApfelGrotezk-RegularBrukt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/L2842428667796473188009178186336/AUTHENTIC-Sans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Autopia";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/A2842428682166486821428918895200/Autopia-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Autopia";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/R2842428674732448959723969593952/Autopia-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Back Out";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/D2842525101619106390547646530144/BackOut.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Basteleur";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/S2842430916122534379876748247648/Basteleur-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Basteleur";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/M2842430924202208284161531855456/Basteleur-Moonlight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "chrysuni";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/J2842428689416057242396772680288/chrysuni.woff") format("woff");
+}
+
+@font-face {
+  font-family: "cmunrm";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/U2842428699820020899968959791712/cmunrm.woff") format("woff");
+}
+
+@font-face {
+  font-family: "cmunti";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/J2842428713378377794145480229472/cmunti.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/F2842428727822178403860059144800/Compagnon-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Q2842428741362088553962870030944/Compagnon-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/A2842428754846658471844552262240/Compagnon-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/J2842428770212796285244608758368/Compagnon-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/X2842428783771153179421129196128/Compagnon-Roman.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DIN 1451";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/O2842428790338194069661729571424/DIN1451-36breit.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GB Jones Lite";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/W2842428803748977011248573596256/G.B.Jones-Lite.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "gap sans";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/C2842428816772378327287517037152/gapsans-webfont.woff2") format("woff2");
+}
+
+gapsansblack-webfont
+@font-face {
+  font-family: "gap sans";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/X2842428829334611041483721687648/gapsansblack-webfont.woff2") format("woff2");
+}
+
+gapsansbold-webfont
+@font-face {
+  font-family: "gap sans";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Y2842428843335689793429271364192/gapsansbold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/C2842445014710775499055114633824/Geist-Italicwght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/R2842445014895242939792210149984/Geistwght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/L2842445015079710380529305666144/GeistMono-Italicwght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Q2842445015264177821266401182304/GeistMonowght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GFS Artemisia";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842429197365602056062985978464/GFSArtemisia-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GFS Artemisia";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/M2842429184194626787434366124640/GFSArtemisia-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GFS Artemisia";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/C2842429190743220933601256948320/GFSArtemisia-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Harenosora";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842429228411472332116161348192/Harenosora.woff") format("woff");
+}
+
+@font-face {
+  font-family: "JGS";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/S2842468233461520380604347728480/jgs5.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JGS";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842468250229610743606330147424/jgs7.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JGS";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Z2842468256925778842362897384032/jgs9.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karrik";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/C2842430983416256760769192542816/Karrik-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karrik";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/E2842430990333785788410274398816/Karrik-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libertinus Mono";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/E2842429260416573300002233401952/LibertinusMono-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "meta old french";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Q2842429268533140692434436112992/meta-old-french.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Meyrin";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/V2842429283069175022517562786400/Meyrin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montaga";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/A2842429290078937770527192400480/Montaga-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Necto Mono";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/O2842429302770297693239363912288/Necto-Mono.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Norm";
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/T2842429317361672255543619240544/norm-italic-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Norm";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Q2842429331528771704152554881632/norm-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ortica";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/D2842429344865767669444560700000/Ortica-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ortica";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/O2842429367020307301969732190816/Ortica-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Px437 IBM";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/H2842429381408767679463182451296/Px437_IBM_PS2thin1.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resistance Generale";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/T2842430996937720166798293877344/resistance_generale-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat Variable";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/C2842463363465744689061592449632/SpratVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Toren";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/M2842429796110021200527612330592/Toren-Mono.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "Toren";
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/U2842429802640168602620793602656/Toren-Proportional.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/O2842463476396711908311467442784/SpratBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/B2842463484439492324448831947360/SpratBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/A2842463491467701816532171113056/SpratCndBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Q2842463500432819436355013198432/SpratCndBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/C2842463507202774511406418641504/SpratCndLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/I2842463514101856794973790945888/SpratCndMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/R2842463520724237917435519976032/SpratCndRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842463527254385319528701248096/SpratCndThin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/M2842463533563171792737367900768/SpratExtnBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/H2842463539835064777798615450208/SpratExtnBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/C2842463546715700317292278202976/SpratExtnLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/F2842463553356528183827716784736/SpratExtnMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Y2842463560624545348869280121440/SpratExtnRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/N2842463567191586239109880496736/SpratExtnThin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Y2842463574238242475266929214048/SpratLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Z2842463580823730109581239140960/SpratMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/L2842463587796599369443449651808/SpratRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sprat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/X2842463594769468629305660162656/SpratThin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 100;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/T2842462895711655212008492122720/WorkSans-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/Y2842462896265057534219778671200/WorkSans-ThinItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Y2842462896154377069777521361504/WorkSans-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842462895637868235713653916256/WorkSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/Z2842462896117483581630102258272/WorkSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/W2842462896228164046072359567968/WorkSans-SemiBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/O2842462895656314979787363467872/WorkSans-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/H2842462895582528003492525261408/WorkSans-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/N2842462895674761723861073019488/WorkSans-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 200;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/M2842462896135930325703811809888/WorkSans-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 500;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/P2842462896172823813851230913120/WorkSans-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/G2842462896246610790146069119584/WorkSans-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/N2842462896099036837556392706656/WorkSans-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 100;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/F2842462896080590093482683155040/WorkSans-ExtraLightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://freight.cargo.site/m/Z2842462895693208467934782571104/WorkSans-ExtraBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Grotesk Variable";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842461470350187380545148306016/SpaceGroteskwght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TGL0";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/X2842457762038119730861406044768/TGL_0-17.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TGL0";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/M2842457762019672986787696493152/TGL_0-17_alt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TGL0";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/C2842457761982779498640277389920/TGL_0-16.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/B2842457001774009476995945742944/SCDream9.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/K2842457001755562732922236191328/SCDream8.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/J2842457001534201804037721571936/SCDream7.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/G2842457001515755059964012020320/SCDream6.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/X2842457001497308315890302468704/SCDream5.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/N2842457001478861571816592917088/SCDream4.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/O2842457001460414827742883365472/SCDream3.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 100;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/U2842457001441968083669173813856/SCDream2.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SCDream";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://freight.cargo.site/m/G2842457001405074595521754710624/SCDream1.woff") format("woff");
+}
+
+bodycopy {
+	font-family: Work Sans;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	letter-spacing: -0.05em;
+	color: #000000;
+}
+
+bodycopy a {
+	color: #000000;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: Michroma;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 6rem;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	color: #000000;
+}
+
+h1 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+h2 {
+	font-family: Karrik;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2rem;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	color: #000000;
+}
+
+h2 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.heading-3 {
+	--text-style: "heading 3";
+	font-family: Work Sans;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	color: #000000;
+}
+
+.heading-3 a {
+	color: #000000;
+}
+
+.heading-3 a:hover {
+}
+
+.caption {
+	font-size: 0.75rem;
+	font-weight: 200;
+	color: rgba(255, 255, 255, 0.6);
+	font-family: "Monument Grotesk Variable";
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0.005em;
+	display: block;
+	font-variation-settings: 'slnt' 0, 'MONO' 0.49;
+	border-style: solid;
+	border-radius: 0rem;
+	border-color: rgba(0,0,0,.85);
+	padding: 0rem;
+}
+
+.caption a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.caption a:hover {
+}
+
+.header-2-bigger-bolder {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.header-2-bigger-bolder a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.header-2-bigger-bolder a:hover {
+	
+}
+
+header-2-bigger-bolder {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+button-2 {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.button-8 {
+	--text-style: "button 8";
+	font-size: 15rem;
+	font-weight: 400;
+	font-family: "Repro Variable";
+	font-style: normal;
+	line-height: 0.75;
+	letter-spacing: -0.05em;
+	font-variation-settings: 'slnt' 0;
+	color: rgba(0, 0, 0, 0.85);
+	display: inline-block;
+	border-color: rgba(0, 0, 0, 0.85);
+	border-style: solid;
+	border-width: 0.2rem;
+	filter: drop-shadow(0rem 0rem 0rem rgba(0,0,0,0.85));
+	will-change: filter;
+	border-radius: 0.5rem;
+	padding: 0.8rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+.button-8 a {
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+}
+
+.button-8 a:hover {
+	
+}
+
+.button-8 a.active {
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+}
+
+button-8 {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.button-12 {
+	--text-style: "button 12";
+	font-size: 1.75rem;
+	font-weight: 300;
+	font-family: "Diatype Variable";
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	color: rgba(0, 0, 0, 0.85);
+	display: inline-block;
+	border-color: rgba(0, 0, 0, 0.85);
+	border-style: solid;
+	border-width: 0.2rem;
+	filter: drop-shadow(0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.25));
+	will-change: filter;
+	border-radius: 0.5rem;
+	padding: 0.8rem;
+	background: #ffffff;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+.button-12 a {
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+}
+
+.button-12 a:hover {
+	
+}
+
+.button-12 a.active {
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+}
+
+button-12 {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.button-15 {
+	--text-style: "button 15";
+	font-size: 1.75rem;
+	font-weight: 300;
+	font-family: "Diatype Variable";
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.6);
+	display: inline-block;
+	padding: 1rem;
+	padding-right: 1.2rem;
+	padding-left: 1.2rem;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
+}
+
+.button-15 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.button-15 a:hover {
+	
+}
+
+.button-15 a.active {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+button-15 {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.landing-page-copy {
+	--text-style: "landing page";
+	font-size: 20rem;
+	font-weight: 300;
+	font-family: Funnel Display;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: -0.104em;
+	display: inline-block;
+	border-width: 0.0rem;
+	filter: drop-shadow(0rem 0rem 2rem rgba(255, 255, 255, 0.84));
+	will-change: filter;
+	background: rgba(0,0,0,0);
+	color: #ffffff;
+}
+
+.landing-page-copy a {
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.landing-page-copy a:hover {
+	
+}
+
+landing-page-copy {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.answer-bubble {
+	--text-style: "Answer bubble";
+	font-size: 1.2rem;
+	font-weight: 420;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: "Diatype Variable";
+	font-style: normal;
+	line-height: 1.2;
+	letter-spacing: 0em;
+	display: inline-block;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	padding: 1rem;
+	background: #e9e9eb;
+	border-style: solid;
+	border-radius: 1rem;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	max-width: 75%;
+	margin-bottom: .75rem;
+	float: left;
+	clear: both;
+}
+
+.answer-bubble a {
+	color: #0033ff;
+	text-decoration: underline;
+}
+
+.answer-bubble a:hover {
+	
+}
+
+answer-bubble {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.question-bubble {
+	--text-style: "Question bubble";
+	font-size: 1.2rem;
+	font-weight: 420;
+	color: #ffffff;
+	font-family: "Diatype Variable";
+	font-style: normal;
+	line-height: 1.2;
+	letter-spacing: 0em;
+	display: inline-block;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.85);
+	border-style: solid;
+	border-radius: 1rem;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	max-width: 75%;
+	margin-bottom: .75rem;
+	float: right;
+	clear: both;
+}
+
+.question-bubble a {
+	color: #0033ff;
+	text-decoration: underline;
+}
+
+.question-bubble a:hover {
+	
+}
+
+question-bubble {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.variable-animation {
+	--text-style: "Variable Animation";
+	font-family: "Monument Grotesk Variable";
+	font-style: normal;
+	font-weight: 700;
+	margin: 0;
+	font-size: 9rem;
+	line-height: 1.05;
+	color: #090205;
+	letter-spacing: -0.01em;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	display: block;
+	filter: drop-shadow(0rem 0.4rem 0.6rem rgba(0, 0, 0, 0.4));
+	will-change: filter;
+}
+
+.variable-animation a {
+	text-decoration: none;
+	color: #090205;
+}
+
+.variable-animation a:hover {
+	
+}
+
+.testing-1 {
+	--text-style: "01";
+	font-size: 1.75rem;
+	font-weight: 100;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Sprat Variable;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+	font-variation-settings: 'wdth' 122,,,,,,;
+}
+
+.testing-1 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.testing-1 a:hover {
+	
+}
+
+.testing-2 {
+	--text-style: "02";
+	font-size: 1.75rem;
+	font-weight: 200;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Work Sans;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.testing-2 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.testing-2 a:hover {
+	
+}
+
+.style-18 {
+	--text-style: "03";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Norm;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-18 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-18 a:hover {
+	
+}
+
+.style-19 {
+	--text-style: "04";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: AUTHENTIC Sans;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-19 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-19 a:hover {
+	
+}
+
+.style-20 {
+	--text-style: "05";
+	font-size: 1.75rem;
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Nunito;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-20 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-20 a:hover {
+	
+}
+
+.style-21 {
+	--text-style: "06";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Michroma;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-21 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-21 a:hover {
+	
+}
+
+.style-22 {
+	--text-style: "07";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: "Terminal Grotesque";
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-22 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-22 a:hover {
+	
+}
+
+.style-23 {
+	--text-style: "08";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: jgs7;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-23 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-23 a:hover {
+	
+}
+
+.style-24 {
+	--text-style: "09";
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: chrysuni;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	display: block;
+}
+
+.style-24 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-24 a:hover {
+	
+}
+
+.style-25 {
+	--text-style: "10";
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: SCDream;
+	font-style: normal;
+	line-height: 1.25;
+	letter-spacing: -0.03em;
+	display: block;
+}
+
+.style-25 a {
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+.style-25 a:hover {
+	
+}
+
+variable-animation {
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.mobile .quick-view .caption-background {
+	max-width: 100vw;
+}
+
+.quick-view-background {
+	background-color: #000000;
+}
+
+::part(slideshow-nav) {
+	--button-size: 30px;
+	--button-inset: 20px;
+	--button-icon-color: rgba(255, 255, 255, 0.9);
+	--button-icon-stroke-width: 1.5px;
+	--button-icon-stroke-linecap: none;
+	--button-background-color: rgba(87, 87, 87, 0.35);
+	--button-background-radius: 50%;
+	--button-active-opacity: 0.7;
+}
+
+gallery-slideshow::part(slideshow-nav) {
+	--button-inset: 15px;
+}
+
+.quick-view::part(slideshow-nav) {
+}
+
+.wallpaper-slideshow::part(slideshow-nav) {
+}
+
+.mobile ::part(slideshow-nav) {
+	--button-inset: 10px;
+}
+
+.mobile .quick-view::part(slideshow-nav) {
+	--button-inset: 25px;
+}
+
+shop-product {
+	font-size: 1.2rem;
+	max-width: 22rem;
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	letter-spacing: 0em;
+	margin-bottom: 1em;
+}
+
+shop-product::part(price) {
+	color: rgba(0, 0, 0, 0.75);
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+}
+
+shop-product::part(dropdown) {
+	width: 100%;
+	color: rgba(0, 0, 0, 0.85);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.0);
+	background-image: url(https://static.cargo.site/assets/images/select-line-arrows.svg);
+	background-repeat: no-repeat;
+	background-position: top 0em right .1em;
+	line-height: 1.2;
+	padding: 0.58em 2em 0.55em 0.9em;
+	border-radius: 10em;
+	margin-bottom: 0.5em;
+}
+
+shop-product::part(button) {
+	background: rgba(0, 0, 0, 0.15);
+	color: rgba(0, 0, 0, 0.75);
+	text-align: left;
+	line-height: normal;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	border-radius: 10em;
+}
+
+shop-product::part(button):active {
+	opacity: .7;
+}
+
+audio-player {
+	--text-color: rgba(0, 0, 0, 0.85);
+	--text-padding: 0 1.2em 0 1.0em;
+	--background-color: rgba(255, 255, 255, 0);
+	--buffer-background-color: rgba(0, 0, 0, 0.03);
+	--progress-background-color: rgba(0, 0, 0, 0.075);
+	--border-lines: 1px solid rgba(0, 0, 0, 0.2);
+	font-size: 1.2rem;
+	width: 32rem;
+	height: 2.75em;
+	font-family: "Diatype Variable";
+	font-style: normal;
+	font-weight: 400;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+	line-height: normal;
+	letter-spacing: 0em;
+	margin-bottom: 0.5em;
+	border-radius: 10em;
+}
+
+audio-player::part(button) {
+	--icon-color: rgba(0, 0, 0, 0.85);
+	--icon-size: 32%;
+	--play-text: '';
+	--pause-text: '';
+	width: 3.15em;
+	display: inline-flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+audio-player::part(play-icon) {
+	padding-left: 0.6em;
+}
+
+audio-player::part(pause-icon) {
+	padding-left: 0.4em;
+}
+
+audio-player::part(progress-indicator) {
+	border-right: 1px solid rgba(0, 0, 0, 0);
+	height: 100%;
+	cursor: ew-resize;
+}
+
+audio-player::part(separator) {
+	border-right: var(--border-lines);
+}
+
+body.mobile audio-player {
+	max-width: 100%;
+}
+
+.style-21-1 {
+	--text-style: "11";
+	font-family: Necto Mono;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.style-22-1 {
+	--text-style: "12";
+	font-family: Px437 IBM;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 1;
+	letter-spacing: 0em;
+}
+
+.style-23-1 {
+	--text-style: "13";
+	font-family: Share Tech;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 1;
+	letter-spacing: 0em;
+}
+
+.style-24-1 {
+	--text-style: "14";
+	font-family: Meyrin;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 1;
+	letter-spacing: 0em;
+}
+
+.style-22-1 a {
+	text-decoration: none;
+}
+
+.project-page-title {
+	--text-style: "project page title";
+	font-family: "Diatype Variable";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	letter-spacing: -0.05em;
+	color: #000000;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.project-page-title a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.project-page-info {
+	--text-style: "project page info";
+	font-family: "Diatype Variable";
+	font-weight: 250;
+	font-style: normal;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	letter-spacing: -0.05em;
+	color: #000000;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+.project-page-info a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.work-header-1 {
+	--text-style: "work header 1";
+	font-family: Work Sans;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 5rem;
+	line-height: 0.75;
+	letter-spacing: -0.1em;
+	color: #000000;
+}
+
+.work-header-1 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.work-subheading-1 {
+	--text-style: "work subheading 1";
+	font-family: SCDream;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	letter-spacing: -0.05em;
+	color: #000000;
+}
+
+.work-subheading-1 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.page-layout {
+	max-width: 100%;
+	align-items: center;
+}
+
+.page-content {
+	padding: 1rem;
+}
+
+.page {
+	justify-content: center;
+}
+
+media-item {
+	--scroll-animation: scrollAnimationFadeInOut-3;
+	--scroll-animation-timing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	--scroll-animation-mode: animation;
+	--scroll-animation-transition-duration: 1200ms;
+}
+:root {
+  --bg-color: #ffffff; /* Default light background */
+  --text-color: #000000; /* Default light text color */
+  /* Define other colors for links, borders, etc. */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Styles when the dark-mode class is active */
+body.dark-mode {
+  --bg-color: #111111; /* Dark background */
+  --text-color: #eeeeee; /* Light text color */
+}
+
+/* Hide the sun icon in light mode, and the moon icon in dark mode */
+body.dark-mode .moon-icon {
+  display: none;
+}
+
+body:not(.dark-mode) .sun-icon {
+  display: none;
+}
+/* ── Dark mode color overrides ────────────────────────────── */
+
+/* Main text elements */
+body.dark-mode bodycopy,
+body.dark-mode bodycopy a,
+body.dark-mode h1,
+body.dark-mode h1 a,
+body.dark-mode h2,
+body.dark-mode h2 a,
+body.dark-mode .heading-3,
+body.dark-mode .heading-3 a,
+body.dark-mode .project-page-title,
+body.dark-mode .project-page-title a,
+body.dark-mode .project-page-info,
+body.dark-mode .project-page-info a,
+body.dark-mode .work-header-1,
+body.dark-mode .work-header-1 a,
+body.dark-mode .work-subheading-1,
+body.dark-mode .work-subheading-1 a {
+  color: #eeeeee;
+}
+
+/* Style variants (01–10) */
+body.dark-mode .testing-1,
+body.dark-mode .testing-1 a,
+body.dark-mode .testing-2,
+body.dark-mode .testing-2 a,
+body.dark-mode .style-18,
+body.dark-mode .style-18 a,
+body.dark-mode .style-19,
+body.dark-mode .style-19 a,
+body.dark-mode .style-20,
+body.dark-mode .style-20 a,
+body.dark-mode .style-21,
+body.dark-mode .style-21 a,
+body.dark-mode .style-22,
+body.dark-mode .style-22 a,
+body.dark-mode .style-23,
+body.dark-mode .style-23 a,
+body.dark-mode .style-24,
+body.dark-mode .style-24 a,
+body.dark-mode .style-25,
+body.dark-mode .style-25 a {
+  color: #eeeeee;
+}
+
+/* Buttons */
+body.dark-mode .button-8,
+body.dark-mode .button-8 a,
+body.dark-mode .button-8 a.active {
+  color: #eeeeee;
+  border-color: rgba(238, 238, 238, 0.7);
+}
+
+body.dark-mode .button-12,
+body.dark-mode .button-12 a,
+body.dark-mode .button-12 a.active {
+  color: #eeeeee;
+  background: #222222;
+  border-color: rgba(238, 238, 238, 0.7);
+}
+
+/* Variable animation */
+body.dark-mode .variable-animation,
+body.dark-mode .variable-animation a {
+  color: #eeeeee;
+}
+
+/* Answer/question bubbles */
+body.dark-mode .answer-bubble {
+  color: #eeeeee;
+  background: #2a2a2e;
+}
+
+body.dark-mode .question-bubble {
+  background: rgba(238, 238, 238, 0.15);
+}
+
+/* Header-2-bigger-bolder */
+body.dark-mode .header-2-bigger-bolder a {
+  color: rgba(238, 238, 238, 0.85);
+}
+
+/* Shop product */
+body.dark-mode shop-product::part(price) {
+  color: rgba(238, 238, 238, 0.75);
+}
+
+body.dark-mode shop-product::part(dropdown) {
+  color: rgba(238, 238, 238, 0.85);
+  border-color: rgba(238, 238, 238, 0.3);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body.dark-mode shop-product::part(button) {
+  background: rgba(238, 238, 238, 0.15);
+  color: rgba(238, 238, 238, 0.75);
+}
+
+/* Toggle button styling */
+#theme-switch {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+body.dark-mode #theme-switch {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes scrollAnimationFadeInOut-3 { 
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}

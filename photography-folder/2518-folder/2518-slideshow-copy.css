@@ -1,0 +1,15 @@
+
+
+[id="T3354801613"] .page-content {
+	text-align: center;
+	align-items: center;
+}
+
+[id="T3354801613"].page {
+	justify-content: center;
+	min-height: var(--viewport-height);
+}
+
+[id="T3354801613"] .page-layout {
+	padding: 0rem;
+}

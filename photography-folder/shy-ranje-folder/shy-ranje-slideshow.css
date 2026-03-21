@@ -1,0 +1,14 @@
+[id="J4043791411"] .page-content {
+	align-items: center;
+	padding-right: 15rem;
+	padding-left: 15rem;
+}
+
+[id="J4043791411"].page {
+	min-height: var(--viewport-height);
+	background-color: rgba(0, 0, 0, 0.16);
+}
+
+[id="J4043791411"] .page-layout {
+	padding: 1rem;
+}

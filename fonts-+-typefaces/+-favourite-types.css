@@ -1,0 +1,14 @@
+[id="K4223909912"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="K4223909912"] .page-content {
+	align-items: center;
+	padding: 3rem;
+	text-align: center;
+}
+
+[id="K4223909912"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

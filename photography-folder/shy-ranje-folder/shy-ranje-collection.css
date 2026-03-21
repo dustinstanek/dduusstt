@@ -1,0 +1,10 @@
+[id="D0628072302"] .page-content {
+	padding-left: 15rem;
+	padding-right: 15rem;
+	align-items: center;
+}
+
+[id="D0628072302"].page {
+	background-color: rgba(0, 0, 0, 0.16);
+	min-height: var(--viewport-height);
+}

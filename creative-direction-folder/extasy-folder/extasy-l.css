@@ -1,0 +1,16 @@
+[id="A1638209872"].page {
+	justify-content: flex-start;
+}
+
+[id="A1638209872"] .page-content {
+	background-color: #23abf2;
+	padding-top: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 3rem;
+}
+
+[id="A1638209872"] .page-layout {
+	max-width: 50%;
+	align-items: flex-end;
+}

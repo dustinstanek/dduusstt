@@ -1,0 +1,625 @@
+{
+  "structure": [
+    {
+      "type": "page",
+      "id": "F4050300507",
+      "title": "z alt photography",
+      "purl": "z-alt-photography"
+    },
+    {
+      "type": "folder",
+      "id": "A0533012961",
+      "title": "Website",
+      "purl": "website",
+      "children": [
+        {
+          "type": "page",
+          "id": "L3905373592",
+          "title": "workpage",
+          "purl": "workpage"
+        },
+        {
+          "type": "page",
+          "id": "F1147438870",
+          "title": "Header",
+          "purl": "header"
+        },
+        {
+          "type": "page",
+          "id": "E2408968504",
+          "title": "nav",
+          "purl": "nav"
+        },
+        {
+          "type": "page",
+          "id": "D1532031542",
+          "title": "main menu",
+          "purl": "main-menu"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "N2976530593",
+      "title": "creative direction folder",
+      "purl": "creative-direction-folder",
+      "children": [
+        {
+          "type": "page",
+          "id": "V1291301463",
+          "title": "creative direction",
+          "purl": "creative-direction-1"
+        },
+        {
+          "type": "folder",
+          "id": "W2532842261",
+          "title": "Extasy Folder",
+          "purl": "extasy-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "A1638209872",
+              "title": "Extasy L",
+              "purl": "extasy-l"
+            },
+            {
+              "type": "page",
+              "id": "L3982575713",
+              "title": "Extasy R",
+              "purl": "extasy-r"
+            },
+            {
+              "type": "page",
+              "id": "J2091369510",
+              "title": "Extasy Header",
+              "purl": "extasy-header"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "S0289452175",
+          "title": "Act Group Folder",
+          "purl": "act-group-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "I2392240472",
+              "title": "Act Group Header",
+              "purl": "act-group-header"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "Q3925005157",
+          "title": "Odie Folder",
+          "purl": "odie-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "Q1833438390",
+              "title": "Odie",
+              "purl": "odie-3"
+            },
+            {
+              "type": "page",
+              "id": "W1144244118",
+              "title": "Odie Header",
+              "purl": "odie-header-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "I2402366147",
+      "title": "films folder",
+      "purl": "films-folder",
+      "children": [
+        {
+          "type": "folder",
+          "id": "Q3794397781",
+          "title": "film & tv folder",
+          "purl": "film-tv-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "T1230269738",
+              "title": "film & tv",
+              "purl": "film-tv"
+            }
+          ]
+        },
+        {
+          "type": "page",
+          "id": "E1449802595",
+          "title": "films",
+          "purl": "films-1"
+        },
+        {
+          "type": "folder",
+          "id": "D2571903418",
+          "title": "adverts folder",
+          "purl": "adverts-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "H0287665811",
+              "title": "adverts",
+              "purl": "adverts"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "D0913123662",
+          "title": "music videos folder",
+          "purl": "music-videos-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "O2872706408",
+              "title": "music videos",
+              "purl": "music-videos-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "Z2934396748",
+      "title": "photography folder",
+      "purl": "photography-folder",
+      "children": [
+        {
+          "type": "folder",
+          "id": "R1106012999",
+          "title": "2518 Folder",
+          "purl": "2518-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "Q3758483187",
+              "title": "2518 Collection",
+              "purl": "2518-collection"
+            },
+            {
+              "type": "page",
+              "id": "Y0973923457",
+              "title": "2518 Slideshow",
+              "purl": "2518-slideshow-1"
+            },
+            {
+              "type": "folder",
+              "id": "T1751991920",
+              "title": "TESTING",
+              "purl": "testing",
+              "children": [
+
+              ]
+            },
+            {
+              "type": "page",
+              "id": "R0090817038",
+              "title": "big photo",
+              "purl": "big-photo"
+            },
+            {
+              "type": "page",
+              "id": "Y1281401033",
+              "title": "photo options copy",
+              "purl": "photo-options-copy"
+            },
+            {
+              "type": "page",
+              "id": "G2821624290",
+              "title": "big photo 1",
+              "purl": "big-photo-1"
+            },
+            {
+              "type": "folder",
+              "id": "R3770734684",
+              "title": "navigation test",
+              "purl": "navigation-test",
+              "children": [
+                {
+                  "type": "page",
+                  "id": "Y2387714926",
+                  "title": "photo options",
+                  "purl": "photo-options"
+                },
+                {
+                  "type": "page",
+                  "id": "R3706822933",
+                  "title": "2518 photos copy",
+                  "purl": "2518-photos-copy"
+                }
+              ]
+            },
+            {
+              "type": "page",
+              "id": "S0393537536",
+              "title": "2518 footer",
+              "purl": "2518-footer-1"
+            },
+            {
+              "type": "page",
+              "id": "T3354801613",
+              "title": "2518 Slideshow copy",
+              "purl": "2518-slideshow-copy"
+            }
+          ]
+        },
+        {
+          "type": "page",
+          "id": "Q1840289815",
+          "title": "photography",
+          "purl": "photography"
+        },
+        {
+          "type": "page",
+          "id": "L1515675988",
+          "title": "photography layout",
+          "purl": "photography-layout"
+        },
+        {
+          "type": "folder",
+          "id": "U2817193874",
+          "title": "Shy Ranje  Folder",
+          "purl": "shy-ranje-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "J4043791411",
+              "title": "Shy Ranje Slideshow",
+              "purl": "shy-ranje-slideshow"
+            },
+            {
+              "type": "page",
+              "id": "D0628072302",
+              "title": "Shy Ranje Collection",
+              "purl": "shy-ranje-collection"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "X1587888219",
+          "title": "Synthesis+ Folder",
+          "purl": "synthesis+-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "S1482468705",
+              "title": "Synethesis+",
+              "purl": "synethesis+"
+            },
+            {
+              "type": "page",
+              "id": "K2091590806",
+              "title": "Synthesis+ Slideshow",
+              "purl": "synthesis+-slideshow"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "E3572155486",
+          "title": "In Who's Name Folder",
+          "purl": "in-who's-name-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "A0112641077",
+              "title": "In Who's Name header",
+              "purl": "in-who's-name-header"
+            },
+            {
+              "type": "page",
+              "id": "Y2794191865",
+              "title": "in who's name slideshow 1x1",
+              "purl": "in-who's-name-slideshow-1x1"
+            },
+            {
+              "type": "page",
+              "id": "L1224514264",
+              "title": "in who's name collection 1x1",
+              "purl": "in-who's-name-collection-1x1"
+            },
+            {
+              "type": "page",
+              "id": "Y0841153007",
+              "title": "in who's name collection 4x5",
+              "purl": "in-who's-name-collection-4x5-1"
+            },
+            {
+              "type": "page",
+              "id": "S1922845211",
+              "title": "in who's name collection 5x4",
+              "purl": "in-who's-name-collection-5x4"
+            },
+            {
+              "type": "page",
+              "id": "B2060236606",
+              "title": "in who's name footer",
+              "purl": "in-who's-name-footer"
+            },
+            {
+              "type": "page",
+              "id": "N2268416707",
+              "title": "in who's name slideshow 4x5",
+              "purl": "in-who's-name-slideshow-4x5"
+            },
+            {
+              "type": "page",
+              "id": "J3972619202",
+              "title": "in who's name slideshow 5x4",
+              "purl": "in-who's-name-slideshow-5x4"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "X1358571723",
+          "title": "Bulow Folder",
+          "purl": "bulow-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "R3760714450",
+              "title": "Bulow",
+              "purl": "bulow"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "N2121890237",
+          "title": "Analogue Folder",
+          "purl": "analogue-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "L3686572533",
+              "title": "Analogue",
+              "purl": "analogue"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "T2588571582",
+          "title": "hissy fitter Folder",
+          "purl": "hissy-fitter-folder-1",
+          "children": [
+            {
+              "type": "page",
+              "id": "A0739453177",
+              "title": "hissy fitter Collection",
+              "purl": "hissy-fitter-collection"
+            },
+            {
+              "type": "page",
+              "id": "A0967828573",
+              "title": "hissy fitter Slideshow",
+              "purl": "hissy-fitter-slideshow"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "I2597224504",
+          "title": "photo project example",
+          "purl": "photo-project-example",
+          "children": [
+            {
+              "type": "page",
+              "id": "U3360093990",
+              "title": "photo example footer",
+              "purl": "photo-example-footer"
+            },
+            {
+              "type": "page",
+              "id": "T4223374523",
+              "title": "photo example header",
+              "purl": "photo-example-header"
+            },
+            {
+              "type": "page",
+              "id": "B3134620350",
+              "title": "photo example slideshow",
+              "purl": "photo-example-slideshow"
+            },
+            {
+              "type": "page",
+              "id": "H4230128614",
+              "title": "photo example collection",
+              "purl": "photo-example-collection"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "Z2086503118",
+          "title": "Mutumbo folder",
+          "purl": "mutumbo-folder",
+          "children": [
+            {
+              "type": "page",
+              "id": "F3201160620",
+              "title": "Mutumbo header",
+              "purl": "mutumbo-header"
+            },
+            {
+              "type": "page",
+              "id": "V1077260407",
+              "title": "Mutumbo slideshow",
+              "purl": "mutumbo-slideshow"
+            },
+            {
+              "type": "page",
+              "id": "T0894061481",
+              "title": "Mutumbo collection",
+              "purl": "mutumbo-collection"
+            },
+            {
+              "type": "page",
+              "id": "H2543095183",
+              "title": "Mutumbo footer",
+              "purl": "mutumbo-footer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "X2344857452",
+      "title": "top",
+      "purl": "top",
+      "children": [
+        {
+          "type": "page",
+          "id": "Y0354801782",
+          "title": "enter A 1",
+          "purl": "enter-a-1"
+        },
+        {
+          "type": "page",
+          "id": "Q0086583170",
+          "title": "enter A 2",
+          "purl": "enter-a-2"
+        },
+        {
+          "type": "page",
+          "id": "B4208561071",
+          "title": "enter B 1 direct",
+          "purl": "enter-b-1-direct-1"
+        },
+        {
+          "type": "page",
+          "id": "V2588924067",
+          "title": "enter B 3 inverted",
+          "purl": "enter-b-3-inverted-1"
+        },
+        {
+          "type": "page",
+          "id": "Y2336206442",
+          "title": "enter C 1",
+          "purl": "enter-c-1"
+        },
+        {
+          "type": "page",
+          "id": "M0718640611",
+          "title": "enter button white",
+          "purl": "enter-button-white"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "id": "F4095150182",
+      "title": "index",
+      "purl": "index"
+    },
+    {
+      "type": "folder",
+      "id": "Z3693290231",
+      "title": "fonts + typefaces",
+      "purl": "fonts-+-typefaces-1",
+      "children": [
+        {
+          "type": "page",
+          "id": "V2770250584",
+          "title": "header type",
+          "purl": "header-type"
+        },
+        {
+          "type": "page",
+          "id": "A1920718459",
+          "title": "bodycopy  type",
+          "purl": "bodycopy-type"
+        },
+        {
+          "type": "page",
+          "id": "W2114429727",
+          "title": "other types",
+          "purl": "other-types"
+        },
+        {
+          "type": "page",
+          "id": "K4223909912",
+          "title": "+ favourite types",
+          "purl": "+-favourite-types"
+        },
+        {
+          "type": "page",
+          "id": "U1935182974",
+          "title": "+ testing main pages",
+          "purl": "+-testing-main-pages"
+        },
+        {
+          "type": "folder",
+          "id": "E1840739563",
+          "title": "text styles to use",
+          "purl": "text-styles-to-use",
+          "children": [
+            {
+              "type": "page",
+              "id": "F1087268232",
+              "title": "Text Style 2",
+              "purl": "text-style-2"
+            },
+            {
+              "type": "page",
+              "id": "K0474319677",
+              "title": "Text Style 1",
+              "purl": "text-style-1"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "R0874177801",
+          "title": "workpage new font testing",
+          "purl": "workpage-new-font-testing",
+          "children": [
+            {
+              "type": "page",
+              "id": "T1369199586",
+              "title": "04 authentic sans",
+              "purl": "04-authentic-sans"
+            },
+            {
+              "type": "page",
+              "id": "R0605850218",
+              "title": "07 terminal",
+              "purl": "07-terminal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "id": "E1096738811",
+      "title": "index v2",
+      "purl": "index-v2"
+    },
+    {
+      "type": "page",
+      "id": "I1072348869",
+      "title": "index v1",
+      "purl": "index-v1"
+    },
+    {
+      "type": "page",
+      "id": "O1539556665",
+      "title": "index v3",
+      "purl": "index-v3"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+
+
+[id="Y0973923457"] .page-content {
+	text-align: center;
+	align-items: center;
+}
+
+[id="Y0973923457"].page {
+	justify-content: center;
+	min-height: var(--viewport-height);
+}
+
+[id="Y0973923457"] .page-layout {
+	padding: 0rem;
+}

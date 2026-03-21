@@ -1,0 +1,14 @@
+[id="A1920718459"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="A1920718459"] .page-content {
+	align-items: center;
+	padding: 3rem;
+	text-align: center;
+}
+
+[id="A1920718459"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

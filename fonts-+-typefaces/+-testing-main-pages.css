@@ -1,0 +1,14 @@
+[id="U1935182974"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="U1935182974"] .page-content {
+	align-items: center;
+	padding: 3rem;
+	text-align: center;
+}
+
+[id="U1935182974"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

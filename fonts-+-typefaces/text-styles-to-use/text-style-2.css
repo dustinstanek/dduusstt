@@ -1,0 +1,16 @@
+[id="F1087268232"].page {
+	min-height: var(--viewport-height);
+	justify-content: flex-start;
+}
+
+[id="F1087268232"] .page-content {
+	align-items: center;
+	text-align: center;
+	padding: 2rem;
+}
+
+[id="F1087268232"] .page-layout {
+	padding: 0rem;
+	align-items: flex-start;
+	max-width: 100%;
+}

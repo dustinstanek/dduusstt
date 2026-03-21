@@ -1,0 +1,17 @@
+[id="E2408968504"].page {
+}
+
+[id="E2408968504"] .page-content {
+	padding: 1rem;
+	background-color: #000000;
+}
+
+[id="E2408968504"] .page-layout {
+	align-items: flex-end;
+	max-width: 25%;
+	padding: 1rem;
+	padding-bottom: 2rem;
+}
+
+.overlay-content:has([id="E2408968504"]) {
+}

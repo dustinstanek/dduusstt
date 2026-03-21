@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cargo Site Structure Explorer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --muted: #666;
+    --accent: #7a9fff;
+    --folder-color: #f0c060;
+    --page-color: #70c0a0;
+    --hidden-color: #555;
+    --pin-color: #e07070;
+    --overlay-color: #c07aff;
+  }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; font-size: 14px; height: 100vh; display: flex; flex-direction: column; }
+  header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+  header h1 { font-size: 15px; font-weight: 600; color: var(--text); }
+  .stats { display: flex; gap: 16px; margin-left: auto; }
+  .stat { font-size: 12px; color: var(--muted); }
+  .stat span { color: var(--text); font-weight: 600; margin-right: 3px; }
+  .main { display: flex; flex: 1; overflow: hidden; }
+  .controls { width: 220px; flex-shrink: 0; border-right: 1px solid var(--border); padding: 14px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
+  .control-group { display: flex; flex-direction: column; gap: 8px; }
+  .control-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+  .toggle { width: 34px; height: 18px; background: var(--border); border-radius: 9px; cursor: pointer; position: relative; transition: background 0.15s; flex-shrink: 0; }
+  .toggle.on { background: var(--accent); }
+  .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; background: #fff; border-radius: 50%; transition: left 0.15s; }
+  .toggle.on::after { left: 18px; }
+  .legend { display: flex; flex-direction: column; gap: 6px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .search-input { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 7px 10px; color: var(--text); font-size: 13px; width: 100%; outline: none; }
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: var(--muted); }
+  .tree-panel { flex: 1; overflow-y: auto; padding: 14px 8px; }
+  .detail-panel { width: 260px; flex-shrink: 0; border-left: 1px solid var(--border); padding: 16px; overflow-y: auto; }
+  .detail-title { font-size: 13px; font-weight: 600; margin-bottom: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .detail-field { margin-bottom: 10px; }
+  .detail-field-label { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+  .detail-field-value { font-size: 13px; font-family: monospace; color: var(--text); word-break: break-all; }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; margin-right: 4px; margin-bottom: 4px; }
+  .badge-pin { background: rgba(224,112,112,0.15); color: var(--pin-color); }
+  .badge-overlay { background: rgba(192,122,255,0.15); color: var(--overlay-color); }
+  .badge-hidden { background: rgba(100,100,100,0.2); color: var(--muted); }
+  .badge-display { background: rgba(112,192,160,0.15); color: var(--page-color); }
+  .no-selection { color: var(--muted); font-size: 13px; margin-top: 20px; }
+  /* Tree nodes */
+  .node { user-select: none; }
+  .node-row { display: flex; align-items: center; gap: 5px; padding: 3px 6px; border-radius: 5px; cursor: pointer; transition: background 0.08s; }
+  .node-row:hover { background: var(--surface2); }
+  .node-row.selected { background: rgba(122,159,255,0.12); outline: 1px solid rgba(122,159,255,0.2); }
+  .node-row.hidden-page { opacity: 0.45; }
+  .node-children { padding-left: 18px; }
+  .node-icon { font-size: 13px; flex-shrink: 0; width: 16px; text-align: center; }
+  .node-title { font-size: 13px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .node-title.folder { color: var(--folder-color); font-weight: 500; }
+  .node-title.page { color: var(--page-color); }
+  .node-title.page-hidden { color: var(--hidden-color); }
+  .node-badges { display: flex; gap: 3px; margin-left: auto; flex-shrink: 0; }
+  .mini-badge { width: 7px; height: 7px; border-radius: 50%; }
+  .mini-pin { background: var(--pin-color); }
+  .mini-overlay { background: var(--overlay-color); }
+  .expand-btn { width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); flex-shrink: 0; transition: transform 0.15s; }
+  .expand-btn.open { transform: rotate(90deg); }
+  .divider { border: none; border-top: 1px solid var(--border); }
+  .prompt-bar { border-top: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: flex-start; gap: 10px; flex-shrink: 0; background: var(--surface); }
+  .prompt-text { flex: 1; font-size: 13px; color: var(--text); line-height: 1.5; font-family: ui-monospace, monospace; white-space: pre-wrap; }
+  .copy-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); border-radius: 5px; padding: 5px 12px; font-size: 12px; cursor: pointer; flex-shrink: 0; transition: background 0.1s; }
+  .copy-btn:hover { background: var(--border); }
+  .highlight { background: rgba(255,220,80,0.25); border-radius: 2px; }
+  .match-count { font-size: 11px; color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cargo Site Structure</h1>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="main">
+  <div class="controls">
+    <div class="control-group">
+      <div class="control-label">Search</div>
+      <input class="search-input" type="text" placeholder="Filter pages…" id="searchInput">
+      <div class="match-count" id="matchCount"></div>
+    </div>
+    <hr class="divider">
+    <div class="control-group">
+      <div class="control-label">Show</div>
+      <div class="toggle-row">
+        <span>Hidden pages</span>
+        <div class="toggle on" id="toggleHidden" onclick="toggleFilter('showHidden')"></div>
+      </div>
+      <div class="toggle-row">
+        <span>Pinned only</span>
+        <div class="toggle" id="togglePinned" onclick="toggleFilter('pinnedOnly')"></div>
+      </div>
+      <div class="toggle-row">
+        <span>Expand all</span>
+        <div class="toggle" id="toggleExpand" onclick="toggleFilter('expandAll')"></div>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="control-group">
+      <div class="control-label">Legend</div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--folder-color)"></div>Folder</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--page-color)"></div>Page (visible)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--hidden-color)"></div>Page (hidden)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pin-color)"></div>Pinned</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--overlay-color)"></div>Overlay</div>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="control-group">
+      <div class="control-label">View</div>
+      <div class="toggle-row">
+        <span>Show IDs</span>
+        <div class="toggle" id="toggleIds" onclick="toggleFilter('showIds')"></div>
+      </div>
+      <div class="toggle-row">
+        <span>Show purls</span>
+        <div class="toggle" id="togglePurls" onclick="toggleFilter('showPurls')"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tree-panel" id="treePanel"></div>
+
+  <div class="detail-panel" id="detailPanel">
+    <div class="detail-title">Node Details</div>
+    <div class="no-selection">Click any node to inspect it.</div>
+  </div>
+</div>
+
+<div class="prompt-bar">
+  <div class="prompt-text" id="promptText">Select a node to generate a description prompt.</div>
+  <button class="copy-btn" onclick="copyPrompt()">Copy</button>
+</div>
+
+<script>
+const DATA = [{"type": "page", "id": "F4050300507", "title": "z alt photography", "purl": "z-alt-photography", "display": false, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "A0533012961", "title": "Website", "purl": "website", "children": [{"type": "page", "id": "L3905373592", "title": "workpage", "purl": "workpage", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "F1147438870", "title": "Header", "purl": "header", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "E2408968504", "title": "nav", "purl": "nav", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "D1532031542", "title": "main menu", "purl": "main-menu", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "N2976530593", "title": "creative direction folder", "purl": "creative-direction-folder", "children": [{"type": "page", "id": "V1291301463", "title": "creative direction", "purl": "creative-direction-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "W2532842261", "title": "Extasy Folder", "purl": "extasy-folder", "children": [{"type": "page", "id": "A1638209872", "title": "Extasy L", "purl": "extasy-l", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "L3982575713", "title": "Extasy R", "purl": "extasy-r", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "J2091369510", "title": "Extasy Header", "purl": "extasy-header", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "S0289452175", "title": "Act Group Folder", "purl": "act-group-folder", "children": [{"type": "page", "id": "I2392240472", "title": "Act Group Header", "purl": "act-group-header", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "Q3925005157", "title": "Odie Folder", "purl": "odie-folder", "children": [{"type": "page", "id": "Q1833438390", "title": "Odie", "purl": "odie-3", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "W1144244118", "title": "Odie Header", "purl": "odie-header-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}]}, {"type": "folder", "id": "I2402366147", "title": "films folder", "purl": "films-folder", "children": [{"type": "folder", "id": "Q3794397781", "title": "film & tv folder", "purl": "film-tv-folder", "children": [{"type": "page", "id": "T1230269738", "title": "film & tv", "purl": "film-tv", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "page", "id": "E1449802595", "title": "films", "purl": "films-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "D2571903418", "title": "adverts folder", "purl": "adverts-folder", "children": [{"type": "page", "id": "H0287665811", "title": "adverts", "purl": "adverts", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "D0913123662", "title": "music videos folder", "purl": "music-videos-folder", "children": [{"type": "page", "id": "O2872706408", "title": "music videos", "purl": "music-videos-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}]}, {"type": "folder", "id": "Z2934396748", "title": "photography folder", "purl": "photography-folder", "children": [{"type": "folder", "id": "R1106012999", "title": "2518 Folder", "purl": "2518-folder", "children": [{"type": "page", "id": "Q3758483187", "title": "2518 Collection", "purl": "2518-collection", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Y0973923457", "title": "2518 Slideshow", "purl": "2518-slideshow-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "T1751991920", "title": "TESTING", "purl": "testing", "children": []}, {"type": "page", "id": "R0090817038", "title": "big photo", "purl": "big-photo", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Y1281401033", "title": "photo options copy", "purl": "photo-options-copy", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "G2821624290", "title": "big photo 1", "purl": "big-photo-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "R3770734684", "title": "navigation test", "purl": "navigation-test", "children": [{"type": "page", "id": "Y2387714926", "title": "photo options", "purl": "photo-options", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "R3706822933", "title": "2518 photos copy", "purl": "2518-photos-copy", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "page", "id": "S0393537536", "title": "2518 footer", "purl": "2518-footer-1", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "T3354801613", "title": "2518 Slideshow copy", "purl": "2518-slideshow-copy", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "page", "id": "Q1840289815", "title": "photography", "purl": "photography", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "L1515675988", "title": "photography layout", "purl": "photography-layout", "display": false, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "U2817193874", "title": "Shy Ranje  Folder", "purl": "shy-ranje-folder", "children": [{"type": "page", "id": "J4043791411", "title": "Shy Ranje Slideshow", "purl": "shy-ranje-slideshow", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "D0628072302", "title": "Shy Ranje Collection", "purl": "shy-ranje-collection", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "X1587888219", "title": "Synthesis+ Folder", "purl": "synthesis+-folder", "children": [{"type": "page", "id": "S1482468705", "title": "Synethesis+", "purl": "synethesis+", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "K2091590806", "title": "Synthesis+ Slideshow", "purl": "synthesis+-slideshow", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "E3572155486", "title": "In Who's Name Folder", "purl": "in-who's-name-folder", "children": [{"type": "page", "id": "A0112641077", "title": "In Who's Name header", "purl": "in-who's-name-header", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Y2794191865", "title": "in who's name slideshow 1x1", "purl": "in-who's-name-slideshow-1x1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "L1224514264", "title": "in who's name collection 1x1", "purl": "in-who's-name-collection-1x1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Y0841153007", "title": "in who's name collection 4x5", "purl": "in-who's-name-collection-4x5-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "S1922845211", "title": "in who's name collection 5x4", "purl": "in-who's-name-collection-5x4", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "B2060236606", "title": "in who's name footer", "purl": "in-who's-name-footer", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "N2268416707", "title": "in who's name slideshow 4x5", "purl": "in-who's-name-slideshow-4x5", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "J3972619202", "title": "in who's name slideshow 5x4", "purl": "in-who's-name-slideshow-5x4", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "X1358571723", "title": "Bulow Folder", "purl": "bulow-folder", "children": [{"type": "page", "id": "R3760714450", "title": "Bulow", "purl": "bulow", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "N2121890237", "title": "Analogue Folder", "purl": "analogue-folder", "children": [{"type": "page", "id": "L3686572533", "title": "Analogue", "purl": "analogue", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "T2588571582", "title": "hissy fitter Folder", "purl": "hissy-fitter-folder-1", "children": [{"type": "page", "id": "A0739453177", "title": "hissy fitter Collection", "purl": "hissy-fitter-collection", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "A0967828573", "title": "hissy fitter Slideshow", "purl": "hissy-fitter-slideshow", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "I2597224504", "title": "photo project example", "purl": "photo-project-example", "children": [{"type": "page", "id": "U3360093990", "title": "photo example footer", "purl": "photo-example-footer", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "T4223374523", "title": "photo example header", "purl": "photo-example-header", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "B3134620350", "title": "photo example slideshow", "purl": "photo-example-slideshow", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "H4230128614", "title": "photo example collection", "purl": "photo-example-collection", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "Z2086503118", "title": "Mutumbo folder", "purl": "mutumbo-folder", "children": [{"type": "page", "id": "F3201160620", "title": "Mutumbo header", "purl": "mutumbo-header", "display": true, "pin": true, "overlay": false, "page_type": "page"}, {"type": "page", "id": "V1077260407", "title": "Mutumbo slideshow", "purl": "mutumbo-slideshow", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "T0894061481", "title": "Mutumbo collection", "purl": "mutumbo-collection", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "H2543095183", "title": "Mutumbo footer", "purl": "mutumbo-footer", "display": true, "pin": true, "overlay": false, "page_type": "page"}]}]}, {"type": "folder", "id": "X2344857452", "title": "top", "purl": "top", "children": [{"type": "page", "id": "Y0354801782", "title": "enter A 1", "purl": "enter-a-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Q0086583170", "title": "enter A 2", "purl": "enter-a-2", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "B4208561071", "title": "enter B 1 direct", "purl": "enter-b-1-direct-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "V2588924067", "title": "enter B 3 inverted", "purl": "enter-b-3-inverted-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "Y2336206442", "title": "enter C 1", "purl": "enter-c-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "M0718640611", "title": "enter button white", "purl": "enter-button-white", "display": true, "pin": true, "overlay": false, "page_type": "page"}]}, {"type": "page", "id": "F4095150182", "title": "index", "purl": "index", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "Z3693290231", "title": "fonts + typefaces", "purl": "fonts-+-typefaces-1", "children": [{"type": "page", "id": "V2770250584", "title": "header type", "purl": "header-type", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "A1920718459", "title": "bodycopy  type", "purl": "bodycopy-type", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "W2114429727", "title": "other types", "purl": "other-types", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "K4223909912", "title": "+ favourite types", "purl": "+-favourite-types", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "U1935182974", "title": "+ testing main pages", "purl": "+-testing-main-pages", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "folder", "id": "E1840739563", "title": "text styles to use", "purl": "text-styles-to-use", "children": [{"type": "page", "id": "F1087268232", "title": "Text Style 2", "purl": "text-style-2", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "K0474319677", "title": "Text Style 1", "purl": "text-style-1", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}, {"type": "folder", "id": "R0874177801", "title": "workpage new font testing", "purl": "workpage-new-font-testing", "children": [{"type": "page", "id": "T1369199586", "title": "04 authentic sans", "purl": "04-authentic-sans", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "R0605850218", "title": "07 terminal", "purl": "07-terminal", "display": true, "pin": false, "overlay": false, "page_type": "page"}]}]}, {"type": "page", "id": "E1096738811", "title": "index v2", "purl": "index-v2", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "I1072348869", "title": "index v1", "purl": "index-v1", "display": true, "pin": false, "overlay": false, "page_type": "page"}, {"type": "page", "id": "O1539556665", "title": "index v3", "purl": "index-v3", "display": true, "pin": false, "overlay": false, "page_type": "page"}];
+
+const state = {
+  showHidden: true,
+  pinnedOnly: false,
+  expandAll: false,
+  showIds: false,
+  showPurls: false,
+  search: '',
+  selected: null,
+  expanded: new Set(),
+};
+
+// Compute stats
+function computeStats(nodes, acc = { pages: 0, folders: 0, hidden: 0, pinned: 0 }) {
+  for (const n of nodes) {
+    if (n.type === 'folder') { acc.folders++; computeStats(n.children || [], acc); }
+    else { acc.pages++; if (!n.display) acc.hidden++; if (n.pin) acc.pinned++; }
+  }
+  return acc;
+}
+
+const STATS = computeStats(DATA);
+
+document.getElementById('stats').innerHTML = `
+  <div class="stat"><span>${STATS.pages}</span>pages</div>
+  <div class="stat"><span>${STATS.folders}</span>folders</div>
+  <div class="stat"><span>${STATS.pinned}</span>pinned</div>
+  <div class="stat"><span>${STATS.hidden}</span>hidden</div>
+`;
+
+// Search matching
+function nodeMatchesSearch(node, q) {
+  if (!q) return true;
+  const lq = q.toLowerCase();
+  if (node.title.toLowerCase().includes(lq)) return true;
+  if (node.purl && node.purl.toLowerCase().includes(lq)) return true;
+  if (node.id && node.id.toLowerCase().includes(lq)) return true;
+  return false;
+}
+
+function subtreeHasMatch(node, q) {
+  if (nodeMatchesSearch(node, q)) return true;
+  if (node.children) return node.children.some(c => subtreeHasMatch(c, q));
+  return false;
+}
+
+function highlightText(text, q) {
+  if (!q) return escHtml(text);
+  const lq = q.toLowerCase();
+  const lt = text.toLowerCase();
+  const idx = lt.indexOf(lq);
+  if (idx === -1) return escHtml(text);
+  return escHtml(text.slice(0, idx)) + `<mark class="highlight">${escHtml(text.slice(idx, idx + q.length))}</mark>` + escHtml(text.slice(idx + q.length));
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+let matchCount = 0;
+
+function renderTree(nodes, depth = 0) {
+  let html = '';
+  for (const node of nodes) {
+    if (state.pinnedOnly && node.type === 'page' && !node.pin) {
+      if (!node.children) continue;
+    }
+    if (!state.showHidden && node.type === 'page' && !node.display) continue;
+
+    const q = state.search;
+    if (q && !subtreeHasMatch(node, q)) continue;
+
+    if (node.type === 'folder') {
+      const hasChildren = (node.children || []).length > 0;
+      const isOpen = state.expandAll || state.expanded.has(node.id) || (q && node.children && node.children.some(c => subtreeHasMatch(c, q)));
+      const isSelected = state.selected === node.id;
+      const childrenFiltered = q ? (node.children || []).filter(c => subtreeHasMatch(c, q)) : (node.children || []);
+      const childCount = childrenFiltered.length;
+
+      html += `<div class="node" data-id="${node.id}">
+        <div class="node-row${isSelected ? ' selected' : ''}" onclick="selectNode('${node.id}', event)" data-fold="${node.id}">
+          <div class="expand-btn${isOpen ? ' open' : ''}">${hasChildren ? '▶' : ''}</div>
+          <div class="node-icon">📁</div>
+          <div class="node-title folder">${highlightText(node.title, q)}</div>
+          <div style="color:var(--muted);font-size:11px;margin-left:4px">${childCount}</div>
+        </div>`;
+      if (isOpen && hasChildren) {
+        html += `<div class="node-children">${renderTree(node.children || [], depth + 1)}</div>`;
+      }
+      html += `</div>`;
+    } else {
+      // page
+      const isHidden = !node.display;
+      const isSelected = state.selected === node.id;
+      const titleClass = isHidden ? 'page-hidden' : 'page';
+      const hiddenClass = isHidden ? ' hidden-page' : '';
+      const badges = [];
+      if (node.pin) badges.push('<div class="mini-badge mini-pin" title="Pinned"></div>');
+      if (node.overlay) badges.push('<div class="mini-badge mini-overlay" title="Overlay"></div>');
+
+      if (nodeMatchesSearch(node, q) && q) matchCount++;
+
+      let subInfo = '';
+      if (state.showIds) subInfo += `<div style="font-size:10px;color:var(--muted);font-family:monospace;margin-left:21px;padding:1px 0">${escHtml(node.id)}</div>`;
+      if (state.showPurls) subInfo += `<div style="font-size:10px;color:var(--muted);font-family:monospace;margin-left:21px;padding:1px 0">/${escHtml(node.purl)}</div>`;
+
+      html += `<div class="node">
+        <div class="node-row${isSelected ? ' selected' : ''}${hiddenClass}" onclick="selectNode('${node.id}', event)">
+          <div class="expand-btn"></div>
+          <div class="node-icon">📄</div>
+          <div class="node-title ${titleClass}">${highlightText(node.title, q)}</div>
+          <div class="node-badges">${badges.join('')}</div>
+        </div>
+        ${subInfo}
+      </div>`;
+    }
+  }
+  return html;
+}
+
+function render() {
+  matchCount = 0;
+  const q = state.search;
+  document.getElementById('treePanel').innerHTML = renderTree(DATA);
+  if (q) {
+    // count leaf page matches
+    let c = 0;
+    function countMatches(nodes) {
+      for (const n of nodes) {
+        if (n.type === 'page' && nodeMatchesSearch(n, q)) c++;
+        if (n.children) countMatches(n.children);
+      }
+    }
+    countMatches(DATA);
+    document.getElementById('matchCount').textContent = c === 0 ? 'No matches' : `${c} match${c !== 1 ? 'es' : ''}`;
+  } else {
+    document.getElementById('matchCount').textContent = '';
+  }
+
+  // Re-attach folder toggle listeners
+  document.querySelectorAll('[data-fold]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const id = el.dataset.fold;
+      if (state.expanded.has(id)) state.expanded.delete(id);
+      else state.expanded.add(id);
+    });
+  });
+}
+
+// Node lookup by id
+function findNode(nodes, id) {
+  for (const n of nodes) {
+    if (n.id === id) return n;
+    if (n.children) { const f = findNode(n.children, id); if (f) return f; }
+  }
+  return null;
+}
+
+function getPath(nodes, id, path = []) {
+  for (const n of nodes) {
+    if (n.id === id) return [...path, n.title];
+    if (n.children) {
+      const found = getPath(n.children, id, [...path, n.title]);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+function selectNode(id, event) {
+  state.selected = id;
+  const node = findNode(DATA, id);
+  if (!node) return;
+  const path = getPath(DATA, id);
+  updateDetail(node, path);
+  updatePrompt(node, path);
+  render();
+}
+
+function updateDetail(node, path) {
+  const panel = document.getElementById('detailPanel');
+  if (node.type === 'folder') {
+    const childCount = (node.children || []).length;
+    const pageCount = countPages(node.children || []);
+    panel.innerHTML = `
+      <div class="detail-title">Folder</div>
+      <div class="detail-field"><div class="detail-field-label">Title</div><div class="detail-field-value">${escHtml(node.title)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">ID</div><div class="detail-field-value">${escHtml(node.id)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">PURL</div><div class="detail-field-value">/${escHtml(node.purl)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">Direct children</div><div class="detail-field-value">${childCount}</div></div>
+      <div class="detail-field"><div class="detail-field-label">Total pages</div><div class="detail-field-value">${pageCount}</div></div>
+      <div class="detail-field"><div class="detail-field-label">Path</div><div class="detail-field-value">${path ? path.map(escHtml).join(' › ') : ''}</div></div>
+    `;
+  } else {
+    const badges = [];
+    if (node.display) badges.push('<span class="badge badge-display">visible</span>');
+    else badges.push('<span class="badge badge-hidden">hidden</span>');
+    if (node.pin) badges.push('<span class="badge badge-pin">pinned</span>');
+    if (node.overlay) badges.push('<span class="badge badge-overlay">overlay</span>');
+
+    panel.innerHTML = `
+      <div class="detail-title">Page</div>
+      <div class="detail-field"><div class="detail-field-label">Title</div><div class="detail-field-value">${escHtml(node.title)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">ID</div><div class="detail-field-value">${escHtml(node.id)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">PURL</div><div class="detail-field-value">/${escHtml(node.purl)}</div></div>
+      <div class="detail-field"><div class="detail-field-label">Status</div><div>${badges.join('')}</div></div>
+      <div class="detail-field"><div class="detail-field-label">Path</div><div class="detail-field-value">${path ? path.map(escHtml).join(' › ') : ''}</div></div>
+    `;
+  }
+}
+
+function countPages(nodes) {
+  let c = 0;
+  for (const n of nodes) { if (n.type === 'page') c++; else c += countPages(n.children || []); }
+  return c;
+}
+
+function updatePrompt(node, path) {
+  const el = document.getElementById('promptText');
+  if (!node) { el.textContent = 'Select a node to generate a description prompt.'; return; }
+  const pathStr = path ? path.slice(0, -1).join(' › ') : '';
+
+  if (node.type === 'folder') {
+    const pages = countPages(node.children || []);
+    el.textContent = `The "${node.title}" folder${pathStr ? ` (inside ${pathStr})` : ''} contains ${(node.children||[]).length} direct children and ${pages} total pages. Its URL path is /${node.purl}.`;
+  } else {
+    const visibility = node.display ? 'visible' : 'hidden';
+    const flags = [node.pin && 'pinned', node.overlay && 'overlay'].filter(Boolean);
+    const flagStr = flags.length ? `, ${flags.join(' and ')}` : '';
+    el.textContent = `The "${node.title}" page is ${visibility}${flagStr}. It lives at /${node.purl}${pathStr ? ` under ${pathStr}` : ''}. Page ID: ${node.id}.`;
+  }
+}
+
+function toggleFilter(key) {
+  state[key] = !state[key];
+  document.getElementById(`toggle${key.charAt(0).toUpperCase() + key.slice(1).replace('show','Show').replace('pinned','Pinned').replace('expand','Expand')}`);
+  // Update toggle UI
+  const toggleMap = { showHidden: 'toggleHidden', pinnedOnly: 'togglePinned', expandAll: 'toggleExpand', showIds: 'toggleIds', showPurls: 'togglePurls' };
+  const el = document.getElementById(toggleMap[key]);
+  if (el) el.classList.toggle('on', state[key]);
+  if (key === 'expandAll') state.expanded.clear();
+  render();
+}
+
+function copyPrompt() {
+  const text = document.getElementById('promptText').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1500);
+  });
+}
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  state.search = e.target.value.trim();
+  if (state.search) state.expanded.clear(); // let subtree match logic handle expansion
+  render();
+});
+
+// Initial render
+render();
+</script>
+</body>
+</html>

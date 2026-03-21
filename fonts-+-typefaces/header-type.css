@@ -1,0 +1,14 @@
+[id="V2770250584"].page {
+	min-height: var(--viewport-height);
+}
+
+[id="V2770250584"] .page-content {
+	align-items: center;
+	padding: 3rem;
+	text-align: center;
+}
+
+[id="V2770250584"] .page-layout {
+	align-items: center;
+	max-width: 100%;
+}

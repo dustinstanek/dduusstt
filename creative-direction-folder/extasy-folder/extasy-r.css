@@ -1,0 +1,15 @@
+[id="L3982575713"].page {
+	justify-content: flex-end;
+}
+
+[id="L3982575713"] .page-content {
+	background-color: #ff9044;
+	padding-top: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 3rem;
+}
+
+[id="L3982575713"] .page-layout {
+	max-width: 50%;
+}

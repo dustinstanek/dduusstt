@@ -1,0 +1,30 @@
+[id="B4208561071"] .page-content {
+	border-radius: 0rem;
+	border-style: solid;
+	border-width: 0rem;
+	text-align: center;
+	width: 100%;
+	padding: 1rem;
+	align-items: center;
+}
+
+[id="B4208561071"] .page-layout {
+	padding: 0rem;
+	max-width: 100%;
+	align-items: center;
+	--page-layout-mix: exclusion;
+}
+
+[id="B4208561071"].page {
+	justify-content: center;
+	min-height: var(--viewport-height);
+}
+
+[id="B4208561071"] .backdrop {
+}
+
+.mobile [id="B4208561071"] .backdrop {
+}
+
+.mobile [id="B4208561071"] .page-layout {
+}

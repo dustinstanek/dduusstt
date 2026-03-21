@@ -1,0 +1,16 @@
+[id="K0474319677"].page {
+	min-height: var(--viewport-height);
+	justify-content: center;
+}
+
+[id="K0474319677"] .page-content {
+	align-items: center;
+	text-align: left;
+	padding: 1rem;
+}
+
+[id="K0474319677"] .page-layout {
+	padding: 0rem;
+	align-items: flex-start;
+	max-width: 100%;
+}
