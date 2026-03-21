@@ -8,6 +8,7 @@ Extracted from Cargo's internal Redux store on 2026-03-21.
 
 ```
 global.css                  — site-wide stylesheet (fonts, layout, vars)
+index.html                  — main index page
 top/                        — landing page / enter button variants
 website/                    — nav, header, main menu, workpage
 photography-folder/         — all photo project pages
@@ -22,8 +23,9 @@ photography-folder/         — all photo project pages
   └── mutumbo-folder/
 films-folder/               — film, tv, adverts, music videos
 creative-direction-folder/  — extasy, act group, odie
-fonts-+-typefaces/           — type specimens and testing
-index.html / index-v1..v3   — index page variants
+_type-testing/              — type specimens and font testing
+_variants/                  — alternate index pages and layout experiments
+_structure/                 — cargo export data and analysis
 ```
 
 ## File conventions

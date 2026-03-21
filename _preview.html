@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dduusstt — Local Preview</title>
+  <style>
+    :root {
+      --viewport-height: 100vh;
+      --sidebar-width: 260px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      width: var(--sidebar-width);
+      min-width: var(--sidebar-width);
+      background: #fafafa;
+      border-right: 1px solid #e0e0e0;
+      overflow-y: auto;
+      padding: 1rem 0;
+      font-size: 13px;
+    }
+
+    #sidebar h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999;
+      padding: 0.5rem 1rem 0.3rem;
+      margin-top: 0.8rem;
+    }
+
+    #sidebar h2:first-child { margin-top: 0; }
+
+    #sidebar a {
+      display: block;
+      padding: 0.3rem 1rem;
+      color: #333;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+
+    #sidebar a:hover { background: #eee; }
+    #sidebar a.active { background: #e0e0ff; font-weight: 600; }
+
+    #sidebar .search-box {
+      padding: 0.5rem 1rem 0.8rem;
+      position: sticky;
+      top: 0;
+      background: #fafafa;
+      z-index: 1;
+    }
+
+    #sidebar input {
+      width: 100%;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    #sidebar input:focus { border-color: #888; }
+
+    /* ── Preview pane ── */
+    #preview-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.5rem 1rem;
+      background: #f5f5f5;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 13px;
+      color: #555;
+    }
+
+    #toolbar .page-title {
+      font-weight: 600;
+      color: #111;
+    }
+
+    #toolbar .page-id {
+      font-family: monospace;
+      font-size: 11px;
+      color: #999;
+    }
+
+    #toolbar button {
+      padding: 0.3rem 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    #toolbar button:hover { background: #eee; }
+
+    #preview-frame {
+      flex: 1;
+      border: none;
+      width: 100%;
+    }
+
+    /* ── Empty state ── */
+    #empty-state {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search pages..." />
+  </div>
+  <div id="page-list"></div>
+</div>
+
+<div id="preview-pane">
+  <div id="toolbar" style="display:none;">
+    <span class="page-title" id="tb-title"></span>
+    <span class="page-id" id="tb-id"></span>
+    <span style="flex:1"></span>
+    <button onclick="toggleMobile()" id="btn-mobile">Mobile</button>
+    <button onclick="toggleDark()" id="btn-dark">Dark Mode</button>
+    <button onclick="openRaw()">View Raw HTML</button>
+  </div>
+  <div id="empty-state">Select a page from the sidebar</div>
+  <iframe id="preview-frame" style="display:none;"></iframe>
+</div>
+
+<script>
+let pageMap = {};
+let currentId = null;
+let isMobile = false;
+let isDark = false;
+
+async function init() {
+  const resp = await fetch('./page-map.json');
+  pageMap = await resp.json();
+  buildSidebar();
+
+  document.getElementById('search').addEventListener('input', (e) => {
+    filterSidebar(e.target.value);
+  });
+}
+
+function buildSidebar() {
+  // Group pages by folder
+  const groups = {};
+  for (const [id, page] of Object.entries(pageMap)) {
+    const path = page.html || '';
+    const parts = path.replace('./', '').split('/');
+    const folder = parts.length > 1 ? parts.slice(0, -1).join('/') : 'root';
+    if (!groups[folder]) groups[folder] = [];
+    groups[folder].push({ id, ...page });
+  }
+
+  const list = document.getElementById('page-list');
+  list.innerHTML = '';
+
+  // Sort folder names, root first
+  const folders = Object.keys(groups).sort((a, b) => {
+    if (a === 'root') return -1;
+    if (b === 'root') return 1;
+    return a.localeCompare(b);
+  });
+
+  for (const folder of folders) {
+    const heading = document.createElement('h2');
+    heading.textContent = folder === 'root' ? 'Root' : folder.replace(/-folder/g, '').replace(/\//g, ' / ');
+    list.appendChild(heading);
+
+    for (const page of groups[folder]) {
+      const a = document.createElement('a');
+      a.textContent = page.title;
+      a.dataset.id = page.id;
+      a.dataset.title = page.title.toLowerCase();
+      a.onclick = () => loadPage(page.id);
+      list.appendChild(a);
+    }
+  }
+}
+
+function filterSidebar(query) {
+  const q = query.toLowerCase();
+  const links = document.querySelectorAll('#page-list a');
+  const headings = document.querySelectorAll('#page-list h2');
+
+  // Show/hide links
+  links.forEach(a => {
+    a.style.display = a.dataset.title.includes(q) ? '' : 'none';
+  });
+
+  // Show/hide headings based on whether they have visible children
+  headings.forEach(h => {
+    let next = h.nextElementSibling;
+    let hasVisible = false;
+    while (next && next.tagName !== 'H2') {
+      if (next.style.display !== 'none') hasVisible = true;
+      next = next.nextElementSibling;
+    }
+    h.style.display = hasVisible ? '' : 'none';
+  });
+}
+
+async function loadPage(id) {
+  currentId = id;
+  const page = pageMap[id];
+
+  // Update sidebar active state
+  document.querySelectorAll('#sidebar a').forEach(a => {
+    a.classList.toggle('active', a.dataset.id === id);
+  });
+
+  // Update toolbar
+  document.getElementById('toolbar').style.display = 'flex';
+  document.getElementById('tb-title').textContent = page.title;
+  document.getElementById('tb-id').textContent = id;
+
+  // Fetch HTML content
+  let htmlContent = '';
+  try {
+    const resp = await fetch(page.html);
+    if (resp.ok) htmlContent = await resp.text();
+  } catch (e) {
+    htmlContent = '<p style="color:red;">Could not load HTML file</p>';
+  }
+
+  // Fetch page CSS
+  let pageCss = '';
+  if (page.css) {
+    try {
+      const resp = await fetch(page.css);
+      if (resp.ok) pageCss = await resp.text();
+    } catch (e) {}
+  }
+
+  // Fetch global CSS
+  let globalCss = '';
+  try {
+    const resp = await fetch('./global.css');
+    if (resp.ok) globalCss = await resp.text();
+  } catch (e) {}
+
+  // Build the preview document
+  const mobileClass = isMobile ? ' mobile' : '';
+  const darkClass = isDark ? ' dark-mode' : '';
+
+  const doc = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>${globalCss}</style>
+  <style>${pageCss}</style>
+  <style>
+    /* Preview overrides */
+    :root { --viewport-height: 100vh; }
+    body { margin: 0; }
+
+    /* Basic Cargo element polyfills */
+    column-set {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+    }
+    column-unit {
+      flex: 1;
+      min-width: 0;
+    }
+    column-unit[span="1"] { flex: 1; }
+    column-unit[span="2"] { flex: 2; }
+    column-unit[span="3"] { flex: 3; }
+    column-unit[span="4"] { flex: 4; }
+    column-unit[span="5"] { flex: 5; }
+    column-unit[span="6"] { flex: 6; }
+
+    gallery-slideshow {
+      display: block;
+      width: 100%;
+    }
+
+    media-item {
+      display: block;
+      width: 100%;
+    }
+
+    media-item img, media-item video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Mobile simulation */
+    body.mobile column-set[mobile-stack="true"] {
+      flex-direction: column;
+    }
+
+    /* Responsive: treat narrow windows as mobile */
+    @media (max-width: 768px) {
+      column-set { flex-direction: column; }
+    }
+
+    /* Navigation links - make them work within preview */
+    a[rel="history"] {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="${darkClass}${mobileClass}">
+  <div id="${id}" class="page">
+    <div class="page-content">
+      <div class="page-layout">
+        ${htmlContent}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Intercept Cargo navigation links and post to parent
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[rel="history"]');
+      if (a) {
+        e.preventDefault();
+        const href = a.getAttribute('href').replace('#', '');
+        window.parent.postMessage({ type: 'navigate', purl: href }, '*');
+      }
+    });
+  </script>
+</body>
+</html>`;
+
+  // Show iframe, hide empty state
+  const frame = document.getElementById('preview-frame');
+  const empty = document.getElementById('empty-state');
+  empty.style.display = 'none';
+  frame.style.display = 'block';
+
+  // Write to iframe
+  frame.srcdoc = doc;
+}
+
+function toggleMobile() {
+  isMobile = !isMobile;
+  const btn = document.getElementById('btn-mobile');
+  btn.style.background = isMobile ? '#d0d0ff' : '';
+  btn.textContent = isMobile ? 'Desktop' : 'Mobile';
+
+  const frame = document.getElementById('preview-frame');
+  frame.style.maxWidth = isMobile ? '390px' : '';
+  frame.style.margin = isMobile ? '0 auto' : '';
+  frame.style.borderLeft = isMobile ? '1px solid #ccc' : '';
+  frame.style.borderRight = isMobile ? '1px solid #ccc' : '';
+
+  if (currentId) loadPage(currentId);
+}
+
+function toggleDark() {
+  isDark = !isDark;
+  const btn = document.getElementById('btn-dark');
+  btn.style.background = isDark ? '#333' : '';
+  btn.style.color = isDark ? '#fff' : '';
+  if (currentId) loadPage(currentId);
+}
+
+function openRaw() {
+  if (!currentId) return;
+  const page = pageMap[currentId];
+  if (page.html) window.open(page.html, '_blank');
+}
+
+// Listen for navigation messages from iframe
+window.addEventListener('message', (e) => {
+  if (e.data?.type === 'navigate') {
+    const purl = e.data.purl;
+    // Find the page by purl
+    for (const [id, page] of Object.entries(pageMap)) {
+      if (page.purl === purl) {
+        loadPage(id);
+        return;
+      }
+    }
+    // Try matching folder names
+    for (const [id, page] of Object.entries(pageMap)) {
+      if (page.purl.includes(purl) || purl.includes(page.purl)) {
+        loadPage(id);
+        return;
+      }
+    }
+    console.warn('Page not found for purl:', purl);
+  }
+});
+
+init();
+</script>
+
+</body>
+</html>

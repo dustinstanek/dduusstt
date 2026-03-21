@@ -2,8 +2,8 @@
   "F4050300507": {
     "title": "z alt photography",
     "purl": "z-alt-photography",
-    "html": "./z-alt-photography.html",
-    "css": "./z-alt-photography.css"
+    "html": "./_variants/z-alt-photography.html",
+    "css": "./_variants/z-alt-photography.css"
   },
   "L3905373592": {
     "title": "workpage",
@@ -74,7 +74,7 @@
   "T1230269738": {
     "title": "film & tv",
     "purl": "film-tv",
-    "html": "./films-folder/film-&-tv-folder/film-&-tv.html",
+    "html": "./films-folder/film-and-tv-folder/film-and-tv.html",
     "css": null
   },
   "E1449802595": {
@@ -350,73 +350,73 @@
   "V2770250584": {
     "title": "header type",
     "purl": "header-type",
-    "html": "./fonts-+-typefaces/header-type.html",
-    "css": "./fonts-+-typefaces/header-type.css"
+    "html": "./_type-testing/header-type.html",
+    "css": "./_type-testing/header-type.css"
   },
   "A1920718459": {
     "title": "bodycopy  type",
     "purl": "bodycopy-type",
-    "html": "./fonts-+-typefaces/bodycopy-type.html",
-    "css": "./fonts-+-typefaces/bodycopy-type.css"
+    "html": "./_type-testing/bodycopy-type.html",
+    "css": "./_type-testing/bodycopy-type.css"
   },
   "W2114429727": {
     "title": "other types",
     "purl": "other-types",
-    "html": "./fonts-+-typefaces/other-types.html",
-    "css": "./fonts-+-typefaces/other-types.css"
+    "html": "./_type-testing/other-types.html",
+    "css": "./_type-testing/other-types.css"
   },
   "K4223909912": {
     "title": "+ favourite types",
     "purl": "+-favourite-types",
-    "html": "./fonts-+-typefaces/+-favourite-types.html",
-    "css": "./fonts-+-typefaces/+-favourite-types.css"
+    "html": "./_type-testing/+-favourite-types.html",
+    "css": "./_type-testing/+-favourite-types.css"
   },
   "U1935182974": {
     "title": "+ testing main pages",
     "purl": "+-testing-main-pages",
-    "html": "./fonts-+-typefaces/+-testing-main-pages.html",
-    "css": "./fonts-+-typefaces/+-testing-main-pages.css"
+    "html": "./_type-testing/+-testing-main-pages.html",
+    "css": "./_type-testing/+-testing-main-pages.css"
   },
   "F1087268232": {
     "title": "Text Style 2",
     "purl": "text-style-2",
-    "html": "./fonts-+-typefaces/text-styles-to-use/text-style-2.html",
-    "css": "./fonts-+-typefaces/text-styles-to-use/text-style-2.css"
+    "html": "./_type-testing/text-styles-to-use/text-style-2.html",
+    "css": "./_type-testing/text-styles-to-use/text-style-2.css"
   },
   "K0474319677": {
     "title": "Text Style 1",
     "purl": "text-style-1",
-    "html": "./fonts-+-typefaces/text-styles-to-use/text-style-1.html",
-    "css": "./fonts-+-typefaces/text-styles-to-use/text-style-1.css"
+    "html": "./_type-testing/text-styles-to-use/text-style-1.html",
+    "css": "./_type-testing/text-styles-to-use/text-style-1.css"
   },
   "T1369199586": {
     "title": "04 authentic sans",
     "purl": "04-authentic-sans",
-    "html": "./fonts-+-typefaces/workpage-new-font-testing/04-authentic-sans.html",
-    "css": "./fonts-+-typefaces/workpage-new-font-testing/04-authentic-sans.css"
+    "html": "./_type-testing/workpage-new-font-testing/04-authentic-sans.html",
+    "css": "./_type-testing/workpage-new-font-testing/04-authentic-sans.css"
   },
   "R0605850218": {
     "title": "07 terminal",
     "purl": "07-terminal",
-    "html": "./fonts-+-typefaces/workpage-new-font-testing/07-terminal.html",
-    "css": "./fonts-+-typefaces/workpage-new-font-testing/07-terminal.css"
+    "html": "./_type-testing/workpage-new-font-testing/07-terminal.html",
+    "css": "./_type-testing/workpage-new-font-testing/07-terminal.css"
   },
   "E1096738811": {
     "title": "index v2",
     "purl": "index-v2",
-    "html": "./index-v2.html",
-    "css": "./index-v2.css"
+    "html": "./_variants/index-v2.html",
+    "css": "./_variants/index-v2.css"
   },
   "I1072348869": {
     "title": "index v1",
     "purl": "index-v1",
-    "html": "./index-v1.html",
-    "css": "./index-v1.css"
+    "html": "./_variants/index-v1.html",
+    "css": "./_variants/index-v1.css"
   },
   "O1539556665": {
     "title": "index v3",
     "purl": "index-v3",
-    "html": "./index-v3.html",
-    "css": "./index-v3.css"
+    "html": "./_variants/index-v3.html",
+    "css": "./_variants/index-v3.css"
   }
 }
