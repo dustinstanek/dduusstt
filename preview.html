@@ -340,7 +340,7 @@ async function loadPage(id) {
     </div>
   </div>
 
-  <script>
+  <scr` + `ipt>
     // Intercept Cargo navigation links and post to parent
     document.addEventListener('click', (e) => {
       const a = e.target.closest('a[rel="history"]');
@@ -350,7 +350,7 @@ async function loadPage(id) {
         window.parent.postMessage({ type: 'navigate', purl: href }, '*');
       }
     });
-  </script>
+  </scr` + `ipt>
 </body>
 </html>`;
 

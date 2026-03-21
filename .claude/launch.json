@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "preview",
+      "runtimeExecutable": "/usr/bin/perl",
+      "runtimeArgs": ["/Users/dustin.stanek/Documents/GitHub/dduusstt/serve.pl", "8899"],
+      "port": 8899
+    }
+  ]
+}
