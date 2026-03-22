@@ -1,0 +1,35 @@
+<!-- Dark mode toggle button -->
+<button id="theme-switch" aria-label="Toggle dark mode">
+  <span class="moon-icon">☾</span>
+  <span class="sun-icon">🌣</span>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeSwitch = document.getElementById("theme-switch");
+    const body = document.body;
+
+    function enableDarkMode() {
+      body.classList.add("dark-mode");
+      localStorage.setItem("dark-mode", "enabled");
+    }
+
+    function disableDarkMode() {
+      body.classList.remove("dark-mode");
+      localStorage.removeItem("dark-mode"); // FIX: was setItem(null) which stored string "null"
+    }
+
+    // Restore preference on load (prevents flash)
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      enableDarkMode();
+    }
+
+    themeSwitch.addEventListener("click", () => {
+      if (body.classList.contains("dark-mode")) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    });
+  });
+</script>
